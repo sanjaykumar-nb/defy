@@ -1,0 +1,1840 @@
+[
+  {
+    "job_id": "5456133b-8a5c-4080-a866-e6eb9edf95f3",
+    "proof_hash": "0xf038b9694817a0e4fd1964368dd26703c3fcd3016b268862ef609a00f359cb05",
+    "proof_bytes32": "0xf038b9694817a0e4fd1964368dd26703c3fcd3016b268862ef609a00f359cb05",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "7f9b87d2-f921-48ea-9794-aea214ea607c",
+    "timestamp": "2026-01-07T08:12:02.722319Z",
+    "components": {
+      "input_hash": "0xbbf66120f5c2ab57364d3a60bbf317d43d746aa2d4acefea93b60820e9a638f7",
+      "computation_hash": "0x060e34f0ca3987f30eba8232dcd8e132b3bcab7c0a3167d2539ba52bb680a6dd",
+      "model_hash": "0xa9308ecfdcd520494194c4a56ebc125758d0e65fcc78d2d5deb331165ab27fc9"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19959,
+      "proving_time_ms": 0.14
+    },
+    "generated_at": "2026-01-07T08:12:12.776615",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "5829a94754dee6c920bd9b818b5f1d0fb037c34b537b18997878e3705f14326a",
+      "block_number": 9995350,
+      "gas_used": 282462,
+      "gas_cost_eth": 2.8246482462e-07,
+      "gas_cost_usd": 0.00070616206155,
+      "explorer_url": "https://sepolia.etherscan.io/tx/5829a94754dee6c920bd9b818b5f1d0fb037c34b537b18997878e3705f14326a",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "0cfa5336-bb7a-4ed4-8646-83efd0244cf4"
+  },
+  {
+    "job_id": "8981511c-a57d-4d9c-8ef6-34f3e25a8e33",
+    "proof_hash": "0x3b712149c96182b4abd85708ef3cbbbdd83f2eb8c22a11b5d517f7085de08d52",
+    "proof_bytes32": "0x3b712149c96182b4abd85708ef3cbbbdd83f2eb8c22a11b5d517f7085de08d52",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "7f9b87d2-f921-48ea-9794-aea214ea607c",
+    "timestamp": "2026-01-07T08:18:28.895377Z",
+    "components": {
+      "input_hash": "0xbbf66120f5c2ab57364d3a60bbf317d43d746aa2d4acefea93b60820e9a638f7",
+      "computation_hash": "0xbc116ff4dee0062d30700cb8c71ee67116546847ad6900bcf50ea8c2b922eea5",
+      "model_hash": "0xa9308ecfdcd520494194c4a56ebc125758d0e65fcc78d2d5deb331165ab27fc9"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18581,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-07T08:18:37.107700",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x1217db2c2c70528e8f9649e4fcad142f1d1218853affc5e0dd962de1fbb11122",
+      "block_number": 9995379,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.8247682474e-07,
+      "gas_cost_usd": 0.00070619206185,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x1217db2c2c70528e8f9649e4fcad142f1d1218853affc5e0dd962de1fbb11122",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "4d729739-5d84-41a9-b5aa-c461975307b8"
+  },
+  {
+    "job_id": "93657a5a-0694-4b11-9d06-1796ced51dfd",
+    "proof_hash": "0xf72073c9e3e1acebd71156713011dc43a6bc684f83080aa0b8c3ca86a4ecca02",
+    "proof_bytes32": "0xf72073c9e3e1acebd71156713011dc43a6bc684f83080aa0b8c3ca86a4ecca02",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "b9d476bb-f563-4ec3-a32b-e5c237c4b2a7",
+    "timestamp": "2026-01-07T11:58:12.824559Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x15da9cb7527ca6ed62ba0a91e07ec307e6ae63fbe2d7f9f59eb8d822547676a1",
+      "model_hash": "0x2ad1db45ab447ce969fc235a289605670238900865dc43a4675be010476d4a68"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15584,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-07T11:58:39.261654",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x038db6e68d2ac360d0ef18e5a7b0267ccbd64f3f3997c50d3475622a0d57e689",
+      "block_number": 9996332,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.96600242266e-07,
+      "gas_cost_usd": 0.0007415006056649999,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x038db6e68d2ac360d0ef18e5a7b0267ccbd64f3f3997c50d3475622a0d57e689",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "70211fd4-5f15-4b01-8a23-ca4ba490f29f"
+  },
+  {
+    "job_id": "e9840416-6a7c-4347-95cb-2641185618fe",
+    "proof_hash": "0x0a4b8958b45262c67f1974b5d7d5a970a55862470b9f0ec614cf60e9d2857f29",
+    "proof_bytes32": "0x0a4b8958b45262c67f1974b5d7d5a970a55862470b9f0ec614cf60e9d2857f29",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-credit-006",
+    "timestamp": "2026-01-07T12:04:45.148299Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x1101fb134a735f79026f4d2129222f2fe38ceb19b603e59c9270a39ede7dfbb3",
+      "model_hash": "0xb506b9306d77feb2ee37fbfbb519b61a0b2beb7381cee620552a1a8f2b0e21a7"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16990,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-07T12:05:01.899163",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xb70298209dad56c5641c212912758875412a63ab4381daf44fc2f399571e8a08",
+      "block_number": 9996363,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.96599394844e-07,
+      "gas_cost_usd": 0.0007414984871100001,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xb70298209dad56c5641c212912758875412a63ab4381daf44fc2f399571e8a08",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "79f5ac36-8c5a-4d6a-ad9e-1c05ce3dc26e"
+  },
+  {
+    "job_id": "f95bd1be-1713-4bfb-9ac0-eb93a9a663a6",
+    "proof_hash": "0xc8648a66fa04564f49e818d87172ba23633e3e69534ea82a17be88cf362a6e53",
+    "proof_bytes32": "0xc8648a66fa04564f49e818d87172ba23633e3e69534ea82a17be88cf362a6e53",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-price-005",
+    "timestamp": "2026-01-07T12:34:57.195303Z",
+    "components": {
+      "input_hash": "0xbbf66120f5c2ab57364d3a60bbf317d43d746aa2d4acefea93b60820e9a638f7",
+      "computation_hash": "0x0504374d3c79622dbfa04e572385ef76309c3bece95f95ce2432e2d4f4be4c0e",
+      "model_hash": "0x56c87148b2225e86be1ff42076569488cd10a8357ceb7fe3509862c157d473eb"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18199,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-07T12:35:13.981215",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xbda6941214c34fa65321c1d4efa0c3550bbfb401b2bb75b5efe4df29cb89c15f",
+      "block_number": 9996491,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.82476542266e-07,
+      "gas_cost_usd": 0.000706191355665,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xbda6941214c34fa65321c1d4efa0c3550bbfb401b2bb75b5efe4df29cb89c15f",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "b0b1ecaf-5a63-439e-8397-9c8ac21bee83"
+  },
+  {
+    "job_id": "ec78368c-2195-41a4-b0d1-486a2e375ac8",
+    "proof_hash": "0xcec952a68c9e603c6cd73ca8f89a7114566d8e5ebc96c0ba655904e4c01d51e5",
+    "proof_bytes32": "0xcec952a68c9e603c6cd73ca8f89a7114566d8e5ebc96c0ba655904e4c01d51e5",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-003",
+    "timestamp": "2026-01-07T12:50:00.153686Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x22f1e51499b9457d21f8a90ba63556d8db4d9f14a2b50d1893714e8ae5e85ca5",
+      "model_hash": "0xa0328f912b2b2dfd3c21eb307488c2136da2009443335ac91737d1a791ead62a"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18551,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-07T12:50:38.261873",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xbd58261b26268766b0a347c186ef3a2cac47b310cb480bc6be0b0d8db06c1f3c",
+      "block_number": 9996558,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.8247682474e-07,
+      "gas_cost_usd": 0.00070619206185,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xbd58261b26268766b0a347c186ef3a2cac47b310cb480bc6be0b0d8db06c1f3c",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "7a8f1c36-3868-4b40-9e98-07159d80462b"
+  },
+  {
+    "job_id": "122895c3-35d4-4828-a092-d2e1d92c3b1d",
+    "proof_hash": "0x223c9ec9fe84fe09f5abc1482ed02d3aaf504dc751a47742a4768c2d4530ec92",
+    "proof_bytes32": "0x223c9ec9fe84fe09f5abc1482ed02d3aaf504dc751a47742a4768c2d4530ec92",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "7f9b87d2-f921-48ea-9794-aea214ea607c",
+    "timestamp": "2026-01-07T15:39:10.387479Z",
+    "components": {
+      "input_hash": "0xbbf66120f5c2ab57364d3a60bbf317d43d746aa2d4acefea93b60820e9a638f7",
+      "computation_hash": "0xb2e920ce5238013f1815aaa49966dfbc59f271f39fb54b266ebf28f7c75efa80",
+      "model_hash": "0xa9308ecfdcd520494194c4a56ebc125758d0e65fcc78d2d5deb331165ab27fc9"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19105,
+      "proving_time_ms": 0.2
+    },
+    "generated_at": "2026-01-07T15:39:26.864840",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xd40677d42e0b8f2eca1636c29933f445e25899b6c9a573130f507f2a45d2dc03",
+      "block_number": 9997290,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.9734060662e-07,
+      "gas_cost_usd": 0.0007433515165500001,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xd40677d42e0b8f2eca1636c29933f445e25899b6c9a573130f507f2a45d2dc03",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "0ec6e8ff-f2d0-46cc-ba2e-04489393a3c7"
+  },
+  {
+    "job_id": "22d2e30f-c9a1-4124-b9dc-9f2dd2f75594",
+    "proof_hash": "0x4d4a0bf058194955ea5de38747199ed64fac8b5c2d429b3a751c0f32150dd1e5",
+    "proof_bytes32": "0x4d4a0bf058194955ea5de38747199ed64fac8b5c2d429b3a751c0f32150dd1e5",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "b9d476bb-f563-4ec3-a32b-e5c237c4b2a7",
+    "timestamp": "2026-01-08T06:28:38.646402Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x9c7dc4101578ccac931380ba378d159687f6d7e36b71a72eee55605407309f37",
+      "model_hash": "0x2ad1db45ab447ce969fc235a289605670238900865dc43a4675be010476d4a68"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17629,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T06:28:49.495260",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x3907d61c942ec9a81db624ee02c5a7a339e07f69289b7cac05455767da3b17c9",
+      "block_number": 10001196,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.8247682474e-07,
+      "gas_cost_usd": 0.00070619206185,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x3907d61c942ec9a81db624ee02c5a7a339e07f69289b7cac05455767da3b17c9",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "244b17ba-66fa-4919-88e3-0a1b56f51c9d"
+  },
+  {
+    "job_id": "530a2d18-749c-47de-8c5f-e5b826af9c8b",
+    "proof_hash": "0x7a4d73f9d0c4b47caeebdf2622b72bb93bbd3157d16077182cd09d9898021777",
+    "proof_bytes32": "0x7a4d73f9d0c4b47caeebdf2622b72bb93bbd3157d16077182cd09d9898021777",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "bd42f1e5-15a5-4ca9-9bda-3e4f5002b85c",
+    "timestamp": "2026-01-08T06:46:36.060560Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x57ae4e0e6f584aeacced81c0b4d8483e61fed48f9e27889b346d91d7c9048603",
+      "model_hash": "0xebd32c0db52aabf64f52d818da332abeb475c690e3ae8731ac5bde72b03f8b94"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16519,
+      "proving_time_ms": 1.05
+    },
+    "generated_at": "2026-01-08T06:46:49.504924",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x5cc6ebc3dffa9569329a49135bb916a8c8576a55bfb355234a3b1568ac3bd307",
+      "block_number": 10001269,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.82476542266e-07,
+      "gas_cost_usd": 0.000706191355665,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x5cc6ebc3dffa9569329a49135bb916a8c8576a55bfb355234a3b1568ac3bd307",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "dd7e11c5-7e7d-4878-a863-995596007bac"
+  },
+  {
+    "job_id": "a93dcfe4-90a0-49a7-a60d-9cf3951daa84",
+    "proof_hash": "0x9fcdac73c9383c571908eac9d94ce5e90ed81bce6b87d0f80ec29b0284cdf951",
+    "proof_bytes32": "0x9fcdac73c9383c571908eac9d94ce5e90ed81bce6b87d0f80ec29b0284cdf951",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "558903e0-b9e0-48d9-8aae-05845df209a1",
+    "timestamp": "2026-01-08T06:54:15.917408Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x1a90c6618f556c2c9405a0bdb405feea8d115ccd1e0f6ace74c308a0d17aee9c",
+      "model_hash": "0xccd1c6cf02aa64c138e807cae4320cf3bdd02bc5aab01c955f83ad166015654b"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19580,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T06:54:25.294655",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x7966617863d9a23a0f288fbb358c36270855a6985764cf32746ae5a097fe7f5c",
+      "block_number": 10001302,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.8247682474e-07,
+      "gas_cost_usd": 0.00070619206185,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x7966617863d9a23a0f288fbb358c36270855a6985764cf32746ae5a097fe7f5c",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "cdfdc500-2a9d-48d7-90ae-520ca9fef941"
+  },
+  {
+    "job_id": "21049d87-a593-46ab-aa19-af868099f55e",
+    "proof_hash": "0xdb27dc08170dc04f68a9f23abb5b59ddd833761e46c86e78eeb578b41822c450",
+    "proof_bytes32": "0xdb27dc08170dc04f68a9f23abb5b59ddd833761e46c86e78eeb578b41822c450",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "d99f7bee-a0be-4f5b-87e6-5219ab579fc6",
+    "timestamp": "2026-01-08T07:01:57.646282Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0xea4883faffc957e73bbff5691344d8520ff81b6eb336001c7c4803049ede77bc",
+      "model_hash": "0x953e9514966403f69fd5c350d5cbd1b5d3aea2d2cad85bbe6abab9bd9adfd18a"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18235,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T07:02:49.817880",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x8ba159f4e2aec9973ab3010d9aaf57aaf605625973f656558717d55de739ecb6",
+      "block_number": 10001337,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.82476542266e-07,
+      "gas_cost_usd": 0.000706191355665,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x8ba159f4e2aec9973ab3010d9aaf57aaf605625973f656558717d55de739ecb6",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "cd695f6d-01fa-4c4e-b740-0f9923123a73"
+  },
+  {
+    "job_id": "13249753-e71c-496a-bddf-e6ab0a03b314",
+    "proof_hash": "0x133c7d948b5f1cc12c0eecbd4ea3c5f6a4af2112b4466c23f26c6350f9dc1f71",
+    "proof_bytes32": "0x133c7d948b5f1cc12c0eecbd4ea3c5f6a4af2112b4466c23f26c6350f9dc1f71",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "iris-compatible-001",
+    "timestamp": "2026-01-08T07:19:09.398936Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x345fc4b50a077a715f2f945c10c63e9992455200dcc175ee8c176f16ce678c5c",
+      "model_hash": "0x921ce26d925add85aadd7e274fe933e7dab636b12fd3543983eb3b9eb0973714"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19134,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T07:19:25.704815",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xf18230213f62e93e66ae80cdf0617efdbb8363075021fc3e4a7502291d297a8a",
+      "block_number": 10001408,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.82488971122e-07,
+      "gas_cost_usd": 0.000706222427805,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xf18230213f62e93e66ae80cdf0617efdbb8363075021fc3e4a7502291d297a8a",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "47b651ea-9731-474e-a1d9-aa9c08acdeca"
+  },
+  {
+    "job_id": "596d0486-1a57-4c9c-a6e4-0c8f0560d1e6",
+    "proof_hash": "0x19ccf779b303734bbebef739953365a7b21144ca40bcda65900b197914a863cd",
+    "proof_bytes32": "0x19ccf779b303734bbebef739953365a7b21144ca40bcda65900b197914a863cd",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "iris-compatible-001",
+    "timestamp": "2026-01-08T07:22:12.967677Z",
+    "components": {
+      "input_hash": "0x359e075e79f1db8bb43831f30adbb3484e02767a8926d8282bfd49062c8c4f20",
+      "computation_hash": "0x99eeae3cbf331c73ab02a234678c75d2d227969b266c6e6ebd391903dc1dffed",
+      "model_hash": "0x921ce26d925add85aadd7e274fe933e7dab636b12fd3543983eb3b9eb0973714"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19623,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T07:23:14.122187",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x0aae12920c1a33ba01f061e99e9525124865c320885cc31609f14d324e5dfc53",
+      "block_number": 10001426,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.8248388659e-07,
+      "gas_cost_usd": 0.000706209716475,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x0aae12920c1a33ba01f061e99e9525124865c320885cc31609f14d324e5dfc53",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "6ee253f1-db18-40b4-b623-db8f5eb5fa90"
+  },
+  {
+    "job_id": "8d3c5e68-0638-450d-9846-03ab511df33e",
+    "proof_hash": "0xa695c7c21083e909f63a2d208b084dbdc481eedfd28e6884978c7997525a2854",
+    "proof_bytes32": "0xa695c7c21083e909f63a2d208b084dbdc481eedfd28e6884978c7997525a2854",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "50e622c4-d5f9-482d-95de-0e866a74a0cd",
+    "timestamp": "2026-01-08T07:24:10.267769Z",
+    "components": {
+      "input_hash": "0x359e075e79f1db8bb43831f30adbb3484e02767a8926d8282bfd49062c8c4f20",
+      "computation_hash": "0x02a22937e3909b9abe9eb38d900a0a27851f4f4d4a4c484d230db62cc7749d63",
+      "model_hash": "0x7967f015f6a4ec80a4176d07a203ff53e52f6a7fbcb79940d4900fb960e3937d"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19436,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T07:24:25.327816",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x43d5a3f777ecd42298314ae52316fbdb9a446d303661a463ea1aa4f9507aab01",
+      "block_number": 10001432,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.82484451538e-07,
+      "gas_cost_usd": 0.000706211128845,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x43d5a3f777ecd42298314ae52316fbdb9a446d303661a463ea1aa4f9507aab01",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "4bfc37f6-05ba-4524-8cb5-30b52f241bca"
+  },
+  {
+    "job_id": "8f6ad4a7-ed7e-4d98-95cf-2f8c2de5dfe7",
+    "proof_hash": "0xdc0a6128a114ecec816c21a93e4131314bcdbd2296cba0955d771d1491ea60f7",
+    "proof_bytes32": "0xdc0a6128a114ecec816c21a93e4131314bcdbd2296cba0955d771d1491ea60f7",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "iris-compatible-001",
+    "timestamp": "2026-01-08T10:57:12.497081Z",
+    "components": {
+      "input_hash": "0x359e075e79f1db8bb43831f30adbb3484e02767a8926d8282bfd49062c8c4f20",
+      "computation_hash": "0x99eeae3cbf331c73ab02a234678c75d2d227969b266c6e6ebd391903dc1dffed",
+      "model_hash": "0x921ce26d925add85aadd7e274fe933e7dab636b12fd3543983eb3b9eb0973714"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16844,
+      "proving_time_ms": 1.51
+    },
+    "generated_at": "2026-01-08T10:57:25.401138",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x126a9254e4a768ee552dc2c9f457cee1041ae23b101c0b78626a1d9b9c91290b",
+      "block_number": 10002355,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.8319289633e-07,
+      "gas_cost_usd": 0.000707982240825,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x126a9254e4a768ee552dc2c9f457cee1041ae23b101c0b78626a1d9b9c91290b",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "5727fc5d-1ec9-4986-99f4-d8e543c0bfbe"
+  },
+  {
+    "job_id": "51818d9a-4736-4ce6-8cad-757cba06cd87",
+    "proof_hash": "0xf7a5588f921d45c4b62eff39e7d7998ff89557544a1c15878e1020482b23207f",
+    "proof_bytes32": "0xf7a5588f921d45c4b62eff39e7d7998ff89557544a1c15878e1020482b23207f",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-home-price-predictor",
+    "timestamp": "2026-01-08T11:52:11.058506Z",
+    "components": {
+      "input_hash": "0xbbf66120f5c2ab57364d3a60bbf317d43d746aa2d4acefea93b60820e9a638f7",
+      "computation_hash": "0x3d9dcdaaf80d88b78aec3ad82d32819e3b7e57805a71eae92e36a9acc03ef2ea",
+      "model_hash": "0x8ae09aaa36fcb4ecba7574eb16baf1acafb1f1e9a76a0b0f20ba73e3a3046647"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16894,
+      "proving_time_ms": 5.63
+    },
+    "generated_at": "2026-01-08T11:52:38.723382",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x97be4881f6e7c455d86403784de602c440adbe28b83b89effdcc6245e7ada37c",
+      "block_number": 10002608,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.82474282474e-07,
+      "gas_cost_usd": 0.0007061857061849999,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x97be4881f6e7c455d86403784de602c440adbe28b83b89effdcc6245e7ada37c",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "cc2b9df5-7114-4aba-875b-6459bae1d47c"
+  },
+  {
+    "job_id": "111db6e7-3081-41f0-bec9-d6df39794470",
+    "proof_hash": "0xaca786b73861963e01c0fc07614516a4cc6c08fdb548024aa2903546be75e5cd",
+    "proof_bytes32": "0xaca786b73861963e01c0fc07614516a4cc6c08fdb548024aa2903546be75e5cd",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-home-price-v2",
+    "timestamp": "2026-01-08T12:11:52.548313Z",
+    "components": {
+      "input_hash": "0xbbf66120f5c2ab57364d3a60bbf317d43d746aa2d4acefea93b60820e9a638f7",
+      "computation_hash": "0xe3b85fe72489c942488cb6bc28a15c093c73bdb825ab521e161c1b580a95ba85",
+      "model_hash": "0xe2a7490c58db5d4acde335e4b90f9f4a73ab59688472472abcb2e06cad499c5f"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18005,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T12:12:01.959107",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x6b884a563736f8878b9a2e791d97c9609f13ed64f03fe85149d60dadec109f66",
+      "block_number": 10002688,
+      "gas_used": 282474,
+      "gas_cost_eth": 3.38983488648e-07,
+      "gas_cost_usd": 0.00084745872162,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x6b884a563736f8878b9a2e791d97c9609f13ed64f03fe85149d60dadec109f66",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "2014b6b2-c838-4a17-a60f-9e66379f53ed"
+  },
+  {
+    "job_id": "09869f47-dc87-41da-b9fd-ead46da7e963",
+    "proof_hash": "0x618a7e5da19628724a0a9667d4213bb8408822e46418d0f1117350f463971472",
+    "proof_bytes32": "0x618a7e5da19628724a0a9667d4213bb8408822e46418d0f1117350f463971472",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-home-price-v2",
+    "timestamp": "2026-01-08T12:13:26.801207Z",
+    "components": {
+      "input_hash": "0x432a799f79d84af1449b0ac9330fe190201b810528f804944148789d34d7536e",
+      "computation_hash": "0x2af6d27a7681ef633c3cf9807aea8618ed4e79f3ef45708f8134f1214b2f1cbc",
+      "model_hash": "0xe2a7490c58db5d4acde335e4b90f9f4a73ab59688472472abcb2e06cad499c5f"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15583,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T12:13:51.329567",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x76044d9e65aa663d899eb34e85c1cb1a7a3f143c80e8f8c37a339aa3700c613d",
+      "block_number": 10002695,
+      "gas_used": 282474,
+      "gas_cost_eth": 3.38989420602e-07,
+      "gas_cost_usd": 0.0008474735515049999,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x76044d9e65aa663d899eb34e85c1cb1a7a3f143c80e8f8c37a339aa3700c613d",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "8d5537e7-a353-40df-8b0a-9619c948d3d9"
+  },
+  {
+    "job_id": "80e8ca23-759d-4eab-90f1-277ff732524f",
+    "proof_hash": "0x888425822f99582b46e6523ca8ffd69b3da4ab0878ba6dd858b1798f68b08f29",
+    "proof_bytes32": "0x888425822f99582b46e6523ca8ffd69b3da4ab0878ba6dd858b1798f68b08f29",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-08T12:14:19.929796Z",
+    "components": {
+      "input_hash": "0xec558a6ec4f8e20f736989480544903e4046758b180c7e9c9b6bac7d8106b726",
+      "computation_hash": "0x345fc4b50a077a715f2f945c10c63e9992455200dcc175ee8c176f16ce678c5c",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17009,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T12:15:26.171962",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x461468daf0119a84f4904220625ac1df7aba98f98cfcf12fd9d2f15c24ffa410",
+      "block_number": null,
+      "gas_used": null,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x461468daf0119a84f4904220625ac1df7aba98f98cfcf12fd9d2f15c24ffa410",
+      "contract_address": null,
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "68d33336-edb2-4c2d-9781-3dfeaefbded2"
+  },
+  {
+    "job_id": "c1fa4e7d-8406-41a4-a48b-3df581c9fe05",
+    "proof_hash": "0xbb904ac24659b55c941a3325196ccd61a206d0194292e81f2fb1f0b5f2b2877c",
+    "proof_bytes32": "0xbb904ac24659b55c941a3325196ccd61a206d0194292e81f2fb1f0b5f2b2877c",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-08T12:15:43.850424Z",
+    "components": {
+      "input_hash": "0x432a799f79d84af1449b0ac9330fe190201b810528f804944148789d34d7536e",
+      "computation_hash": "0xe6df00edee242b7cee4da88d749f978bf03ba423987b866618a5a376cbbef832",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15182,
+      "proving_time_ms": 1.01
+    },
+    "generated_at": "2026-01-08T12:15:47.548710",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'replacement transaction underpriced'}",
+      "chain": "Sepolia"
+    },
+    "id": "afa1387b-c26a-4e8c-b2f3-3d9e898b895a"
+  },
+  {
+    "job_id": "ed8a0f9e-2be4-423f-ae95-3e27185bbe29",
+    "proof_hash": "0x957af85dbcf02186ceb8091d09921ad9fb605e39c03a65258468f464903d34bb",
+    "proof_bytes32": "0x957af85dbcf02186ceb8091d09921ad9fb605e39c03a65258468f464903d34bb",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-home-price-v2",
+    "timestamp": "2026-01-08T15:10:54.456604Z",
+    "components": {
+      "input_hash": "0xbbf66120f5c2ab57364d3a60bbf317d43d746aa2d4acefea93b60820e9a638f7",
+      "computation_hash": "0xe3b85fe72489c942488cb6bc28a15c093c73bdb825ab521e161c1b580a95ba85",
+      "model_hash": "0xe2a7490c58db5d4acde335e4b90f9f4a73ab59688472472abcb2e06cad499c5f"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15286,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:11:00.572950",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x50f50f2af2cc96b66b1c15868117b2d059a42315443d3ad8bc9008e3cb195603",
+      "block_number": 10003472,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.04473739398e-06,
+      "gas_cost_usd": 0.015111843484949998,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x50f50f2af2cc96b66b1c15868117b2d059a42315443d3ad8bc9008e3cb195603",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "97c2263e-d8ab-472b-996a-5947a876df1c"
+  },
+  {
+    "job_id": "e96441c2-9acf-48f8-a8b7-5d57f2382685",
+    "proof_hash": "0xba71fe0c25ac23382129cc2c33c5c554586a485a67d3cb7af8d2fbb50abe5fc9",
+    "proof_bytes32": "0xba71fe0c25ac23382129cc2c33c5c554586a485a67d3cb7af8d2fbb50abe5fc9",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-home-price-v2",
+    "timestamp": "2026-01-08T15:11:14.762366Z",
+    "components": {
+      "input_hash": "0x432a799f79d84af1449b0ac9330fe190201b810528f804944148789d34d7536e",
+      "computation_hash": "0x2af6d27a7681ef633c3cf9807aea8618ed4e79f3ef45708f8134f1214b2f1cbc",
+      "model_hash": "0xe2a7490c58db5d4acde335e4b90f9f4a73ab59688472472abcb2e06cad499c5f"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18194,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:11:24.545210",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x00f87f98dd9ded1d5f3b17c18bedcfa84b9aa11a445108e305cf356ca4a9f385",
+      "block_number": 10003473,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.476907311758e-06,
+      "gas_cost_usd": 0.013692268279394999,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x00f87f98dd9ded1d5f3b17c18bedcfa84b9aa11a445108e305cf356ca4a9f385",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "6d9ae5e9-88bf-46f1-b8b1-2247dcd52800"
+  },
+  {
+    "job_id": "c5f6ca7f-59d8-4a7c-bf4f-44f69c03c24a",
+    "proof_hash": "0x8296a650b1e8f68eaa641cd62f0e78ad99ab3503c6fff09b23357591591f1571",
+    "proof_bytes32": "0x8296a650b1e8f68eaa641cd62f0e78ad99ab3503c6fff09b23357591591f1571",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-churn-predictor-v2",
+    "timestamp": "2026-01-08T15:13:11.166360Z",
+    "components": {
+      "input_hash": "0x432a799f79d84af1449b0ac9330fe190201b810528f804944148789d34d7536e",
+      "computation_hash": "0xbf68c4d2b17ddd65bf47c2796cbb3cc91c6d3d17f2120eb52481c4f67971a07e",
+      "model_hash": "0xb0896d340f9f80be98d5a750f922c5b2b856494de91f34953db061f1f2789ab5"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18714,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:13:24.582410",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xd304112cc4bdd725a606e2fe9619f7f75e46f2f21ab7126f9d63dcc8d50df983",
+      "block_number": 10003481,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.376536955234e-06,
+      "gas_cost_usd": 0.013441342388085,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xd304112cc4bdd725a606e2fe9619f7f75e46f2f21ab7126f9d63dcc8d50df983",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "23e98e4b-285d-4dae-8921-72e7faeb6a4f"
+  },
+  {
+    "job_id": "6744f841-d086-41d3-823c-ceaa205c10c3",
+    "proof_hash": "0xe031fbe38c11ea75cb5613716be4ee1c6dd435ceac342d471c44857aa8c50241",
+    "proof_bytes32": "0xe031fbe38c11ea75cb5613716be4ee1c6dd435ceac342d471c44857aa8c50241",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-churn-predictor-v2",
+    "timestamp": "2026-01-08T15:14:46.245006Z",
+    "components": {
+      "input_hash": "0x359e075e79f1db8bb43831f30adbb3484e02767a8926d8282bfd49062c8c4f20",
+      "computation_hash": "0xc8657cb1724833dfb51487a7076657f9a3703a2e8754dfe1eac95de148a10a69",
+      "model_hash": "0xb0896d340f9f80be98d5a750f922c5b2b856494de91f34953db061f1f2789ab5"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17284,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:15:00.895792",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x88c090515ab69058f088601dbc718e798dacabbb0044454e321b26a7cbf07dec",
+      "block_number": 10003489,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.148436141646e-06,
+      "gas_cost_usd": 0.015371090354115,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x88c090515ab69058f088601dbc718e798dacabbb0044454e321b26a7cbf07dec",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "2df42439-01e4-4b1f-9afd-ea9c1fcec934"
+  },
+  {
+    "job_id": "2aff1763-a5f8-4fa5-b598-d61ff1e44945",
+    "proof_hash": "0xa7fc76b64ecc6fdf533f7428f985f79cb15f81ea139e4167f795902b166e2d0c",
+    "proof_bytes32": "0xa7fc76b64ecc6fdf533f7428f985f79cb15f81ea139e4167f795902b166e2d0c",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-08T15:27:26.337525Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x0e2611c3cd8c3343a06a84409366bd28e9b74e7edaec4dc8bcd3071209455e35",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18023,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:27:36.512509",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x0a4a8f7e64e3f33863046d2273ed4ae6883b9c2d128aecd70aef23abaa23b76e",
+      "block_number": 10003547,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.835748722606e-06,
+      "gas_cost_usd": 0.014589371806515,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x0a4a8f7e64e3f33863046d2273ed4ae6883b9c2d128aecd70aef23abaa23b76e",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "1517e288-8907-4c7a-b3fd-a9162bc84739"
+  },
+  {
+    "job_id": "c48d854e-766f-44ed-aac1-2167d4496208",
+    "proof_hash": "0x1580b531323da72ecf26323bbbc715a99cdf1e373c8cb69a324b0d85af1ced13",
+    "proof_bytes32": "0x1580b531323da72ecf26323bbbc715a99cdf1e373c8cb69a324b0d85af1ced13",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-08T15:32:32.051250Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x4449eb99cd7f3320616b1e60449fa16fa4c760aed149c1ac0bb276bd59cbbc18",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16468,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:32:48.617322",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x67d2126e31ebdc69ed4b2611d007a02ba265b1044aa77ea5beb6ce149a42100f",
+      "block_number": 10003570,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.38225677126e-06,
+      "gas_cost_usd": 0.01345564192815,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x67d2126e31ebdc69ed4b2611d007a02ba265b1044aa77ea5beb6ce149a42100f",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "58d63d9c-e36b-4aae-a4ce-76e64603714a"
+  },
+  {
+    "job_id": "8fff396e-8572-42b5-b1e2-ac428d213a41",
+    "proof_hash": "0xfd730e3a0b295380a787788bdcbd25e1cbcd307c4064b6f154c4d9847be44925",
+    "proof_bytes32": "0xfd730e3a0b295380a787788bdcbd25e1cbcd307c4064b6f154c4d9847be44925",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-08T15:33:23.836347Z",
+    "components": {
+      "input_hash": "0x5c9c42d66aeafc6bf6135145dedd0983afbf6d6f68233b78992a319ad81db879",
+      "computation_hash": "0x9205dbb69c9324fce511b274cc3cdd9047847e7fd576593245badeae327099af",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19486,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:33:36.496037",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x43aa34864d6caab30be1a7a432378ad69ae7d00c2cd326c55e492301b746dfc2",
+      "block_number": 10003574,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.220200638664e-06,
+      "gas_cost_usd": 0.01555050159666,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x43aa34864d6caab30be1a7a432378ad69ae7d00c2cd326c55e492301b746dfc2",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "274659dd-37d6-46dc-ad60-14200966fbc9"
+  },
+  {
+    "job_id": "7320aadc-be2a-41b3-889f-bd4dde2dc7c0",
+    "proof_hash": "0x900a815be98a53511a05c13b9195ee91264eebb597df1a9592c4f82f725d12f9",
+    "proof_bytes32": "0x900a815be98a53511a05c13b9195ee91264eebb597df1a9592c4f82f725d12f9",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-home-price-v2",
+    "timestamp": "2026-01-08T15:34:04.028150Z",
+    "components": {
+      "input_hash": "0x432a799f79d84af1449b0ac9330fe190201b810528f804944148789d34d7536e",
+      "computation_hash": "0x2af6d27a7681ef633c3cf9807aea8618ed4e79f3ef45708f8134f1214b2f1cbc",
+      "model_hash": "0xe2a7490c58db5d4acde335e4b90f9f4a73ab59688472472abcb2e06cad499c5f"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17985,
+      "proving_time_ms": 0.55
+    },
+    "generated_at": "2026-01-08T15:34:25.527892",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xf193f634a3ea0c410a08facdcb9518cd35a2e630a25434977fd1d01a156b83b7",
+      "block_number": 10003578,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.695849236996e-06,
+      "gas_cost_usd": 0.01423962309249,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xf193f634a3ea0c410a08facdcb9518cd35a2e630a25434977fd1d01a156b83b7",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "ad7dec9f-a3e4-427b-afae-a73d9f685fdf"
+  },
+  {
+    "job_id": "276edcb3-8a20-4596-a29d-a72afc937d8d",
+    "proof_hash": "0xe6e278aff11b8ba2ca2461ee93da19673e3410b3c5fd02673b86e452d600d0a6",
+    "proof_bytes32": "0xe6e278aff11b8ba2ca2461ee93da19673e3410b3c5fd02673b86e452d600d0a6",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-08T15:34:37.504920Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18370,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:34:48.812157",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xe11269b506a27fd03fe38e8e724bfa9c276e5d8930f2d68b231eedb887325f10",
+      "block_number": 10003580,
+      "gas_used": 282462,
+      "gas_cost_eth": 6.086039519262e-06,
+      "gas_cost_usd": 0.015215098798154999,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xe11269b506a27fd03fe38e8e724bfa9c276e5d8930f2d68b231eedb887325f10",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "3ff5cce7-de35-4873-9818-7db2a386497e"
+  },
+  {
+    "job_id": "bc43c388-a409-4021-9c44-dd0334e51bcc",
+    "proof_hash": "0x9d93b0ad021fe5b8287364cc1a142069f961dd42c60265aa9b1df4d10d42d414",
+    "proof_bytes32": "0x9d93b0ad021fe5b8287364cc1a142069f961dd42c60265aa9b1df4d10d42d414",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-resume-classifier-model",
+    "timestamp": "2026-01-08T15:35:07.160282Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x74654e6c3b846bbe73df6f7929a8d93d638a575ac68e9fa5394582776f952753",
+      "model_hash": "0x4148be7dbaafc46c84d950c2a11733dee1251761fc08ce9ffcabeb8b1b9dbace"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17823,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:35:26.154841",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x4d8d9ae5e2b49c569db22a9d1772fcc2a6bc59a03b87eb7a53b77bfbdc28446e",
+      "block_number": 10003582,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.097971596598e-06,
+      "gas_cost_usd": 0.015244928991495,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x4d8d9ae5e2b49c569db22a9d1772fcc2a6bc59a03b87eb7a53b77bfbdc28446e",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "f510a2fb-3b67-4314-a6fd-5fdce2db67af"
+  },
+  {
+    "job_id": "545c53ef-5e8a-4aaa-844b-21d12850c2b6",
+    "proof_hash": "0x81e21cfc9706633af7852b2135c9bd7a203cf73441560e81dfd84e2be8692f82",
+    "proof_bytes32": "0x81e21cfc9706633af7852b2135c9bd7a203cf73441560e81dfd84e2be8692f82",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-sentiment-v2",
+    "timestamp": "2026-01-08T15:35:40.762114Z",
+    "components": {
+      "input_hash": "0xb88d0cf0cf9d1215a9f607a1e8b2be5865db482b7ac0bd2f78f6c5d82a70cd0f",
+      "computation_hash": "0xcdcbd6def29cd4aa6c87a9f5944055adf3f93edcccf0ee80f219aec402352b3e",
+      "model_hash": "0x4467bad0ff6538c2edb77b963aa3ba5201e7f9d2941625b1390042ff62dbddc4"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15836,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:35:48.908869",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xf4e7163ce82302efe56e7aaa2229536878c918be619ff12aed30ec941155a1d9",
+      "block_number": 10003584,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.059107976256e-06,
+      "gas_cost_usd": 0.01514776994064,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xf4e7163ce82302efe56e7aaa2229536878c918be619ff12aed30ec941155a1d9",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "0b639a7c-79ff-438a-aa47-c8c888f0c39a"
+  },
+  {
+    "job_id": "68eb78d2-7fc6-4a4a-bd90-36949cbb4905",
+    "proof_hash": "0x2b5f4bd20c3c156a5e382f42dfb98746a9890f275a1fbeb5048dd91b2881e5a2",
+    "proof_bytes32": "0x2b5f4bd20c3c156a5e382f42dfb98746a9890f275a1fbeb5048dd91b2881e5a2",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "iris-compatible-001",
+    "timestamp": "2026-01-08T15:35:54.694776Z",
+    "components": {
+      "input_hash": "0x359e075e79f1db8bb43831f30adbb3484e02767a8926d8282bfd49062c8c4f20",
+      "computation_hash": "0x99eeae3cbf331c73ab02a234678c75d2d227969b266c6e6ebd391903dc1dffed",
+      "model_hash": "0x921ce26d925add85aadd7e274fe933e7dab636b12fd3543983eb3b9eb0973714"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19943,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:36:12.775102",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x12f78641d569830de5cb46614fe174f278f4e43e784b4106544cd846a09a43c3",
+      "block_number": 10003585,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.550000566472e-06,
+      "gas_cost_usd": 0.01387500141618,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x12f78641d569830de5cb46614fe174f278f4e43e784b4106544cd846a09a43c3",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "9a65cb7b-c82d-4de1-9a36-3a6b43e5d780"
+  },
+  {
+    "job_id": "958398bc-8e1e-40d6-a972-e3bef72cfb73",
+    "proof_hash": "0xc26fe7e227263dd1c244b24025c789b3bbe7575e6361a2a64ae7e8aabdeecf99",
+    "proof_bytes32": "0xc26fe7e227263dd1c244b24025c789b3bbe7575e6361a2a64ae7e8aabdeecf99",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-resume-classifier-model",
+    "timestamp": "2026-01-08T15:36:39.502930Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x74654e6c3b846bbe73df6f7929a8d93d638a575ac68e9fa5394582776f952753",
+      "model_hash": "0x4148be7dbaafc46c84d950c2a11733dee1251761fc08ce9ffcabeb8b1b9dbace"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18083,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:37:24.784062",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xb87b164150f5f8661c569bcad4a848fd9d0d87b00af6a149dd9117f1926a0148",
+      "block_number": 10003589,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.586491405214e-06,
+      "gas_cost_usd": 0.013966228513035,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xb87b164150f5f8661c569bcad4a848fd9d0d87b00af6a149dd9117f1926a0148",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "77fbe91b-d743-4a21-8422-cabeb575d3f6"
+  },
+  {
+    "job_id": "004c51b4-99b9-4cc9-a45f-497158b8e9d0",
+    "proof_hash": "0x65a145f298251ae64d9d261bb09d7e91759f3bd254476d2682367e2a7298ed53",
+    "proof_bytes32": "0x65a145f298251ae64d9d261bb09d7e91759f3bd254476d2682367e2a7298ed53",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-resume-classifier-v2",
+    "timestamp": "2026-01-08T15:41:38.858855Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x0f20ab83188e4c8707ba1194a5f2a0ed26ed5eb61b7a3894306058951544daaf",
+      "model_hash": "0xecb729b23099bf158e4ad6885e3f98682745f37c1ded4885678828edec468464"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17857,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:41:49.795086",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xb4721c66c3714ed1651af5c43342397e7e11332d321fa4fd2a718cba054f537a",
+      "block_number": 10003610,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.040243797588e-06,
+      "gas_cost_usd": 0.01510060949397,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xb4721c66c3714ed1651af5c43342397e7e11332d321fa4fd2a718cba054f537a",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "168f22fb-a918-43fa-a259-079d4ef5d706"
+  },
+  {
+    "job_id": "6dd9808f-3c28-498e-a222-be310be0d48b",
+    "proof_hash": "0x97819320c8207ac447b48aa6e553a545243df9e406d01ca93d5a280ed2b6ad81",
+    "proof_bytes32": "0x97819320c8207ac447b48aa6e553a545243df9e406d01ca93d5a280ed2b6ad81",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-resume-classifier-v2",
+    "timestamp": "2026-01-08T15:41:52.417306Z",
+    "components": {
+      "input_hash": "0xe19f4ab2c64f224f372597acddd423b2e581815796ebf785cb2fdac3e5d54d60",
+      "computation_hash": "0x208cf0676c2720b7afd9e4623118adecfc22ed9701416479453ae9aec9b8469f",
+      "model_hash": "0xecb729b23099bf158e4ad6885e3f98682745f37c1ded4885678828edec468464"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19071,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:42:13.054641",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xd7f1bcb3e0a004587a772c255eed9b1dddb5d228c61342b6fa31308f31de59a6",
+      "block_number": 10003612,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.583289844898e-06,
+      "gas_cost_usd": 0.013958224612245001,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xd7f1bcb3e0a004587a772c255eed9b1dddb5d228c61342b6fa31308f31de59a6",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "b8de3130-d8de-4b64-970b-0d8a56de1265"
+  },
+  {
+    "job_id": "fe549640-f9bd-4c3c-b80e-b5b653c0b693",
+    "proof_hash": "0xa1904e8a97a36c9316df4061d1e0af9935ddbe6bfc15ca6ad8dc71c23cec233f",
+    "proof_bytes32": "0xa1904e8a97a36c9316df4061d1e0af9935ddbe6bfc15ca6ad8dc71c23cec233f",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-embed-004",
+    "timestamp": "2026-01-08T15:55:22.077762Z",
+    "components": {
+      "input_hash": "0x0e4014da791647e822a62d4b8496a68ea18816e28ce0fc9953b3bbe267c308f7",
+      "computation_hash": "0xd8076b5cdbf6a31cce4be5a8a5adf5296c7ef68fd104be70496d70cda829c11f",
+      "model_hash": "0x94fa1521250714d0b4d1b254445992e871d180074b90673ef018842bd93e46b5"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17029,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T15:55:37.545050",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x3180596206b1898732d58f5a38ab07248d4db3f68760db382204648050587f35",
+      "block_number": 10003670,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.800808948598e-06,
+      "gas_cost_usd": 0.014502022371495,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x3180596206b1898732d58f5a38ab07248d4db3f68760db382204648050587f35",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "a2daa322-582a-4167-88a4-e3a97a46e7b9"
+  },
+  {
+    "job_id": "dbba081f-8bc2-4610-bb98-4ca9ba8d1da4",
+    "proof_hash": "0x65180c4ade170954c09a81b398f3357a7ffd86e0d39d90478e4f2f1a04c2f717",
+    "proof_bytes32": "0x65180c4ade170954c09a81b398f3357a7ffd86e0d39d90478e4f2f1a04c2f717",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-08T16:27:42.150568Z",
+    "components": {
+      "input_hash": "0x5c9c42d66aeafc6bf6135145dedd0983afbf6d6f68233b78992a319ad81db879",
+      "computation_hash": "0x9205dbb69c9324fce511b274cc3cdd9047847e7fd576593245badeae327099af",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17782,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T16:28:45.054681",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xf9f104978c38dc120ad166406d93cb80c960adefcdbcbd8e47fdc9642582bd63",
+      "block_number": null,
+      "gas_used": null,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xf9f104978c38dc120ad166406d93cb80c960adefcdbcbd8e47fdc9642582bd63",
+      "contract_address": null,
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "0bbd61f0-3773-49bd-a698-a0a466dfeacc"
+  },
+  {
+    "job_id": "99eac009-aa61-4d1d-ac14-2daeaaa1dd3a",
+    "proof_hash": "0x9a8807540cd5bcd18d9d8bb5b2a5ebeb89fdad9f3e79fbea66c083fe6e91fa1a",
+    "proof_bytes32": "0x9a8807540cd5bcd18d9d8bb5b2a5ebeb89fdad9f3e79fbea66c083fe6e91fa1a",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-sentiment-v2",
+    "timestamp": "2026-01-08T16:58:41.250666Z",
+    "components": {
+      "input_hash": "0x8c82e116fc2662effde4d75b454a38e08343f249e23b19894e25e865399c79af",
+      "computation_hash": "0xa54ede4df82c61bca96b8ae97bdd3d9fbb42069256e9753a1c093235d0616a0e",
+      "model_hash": "0x4467bad0ff6538c2edb77b963aa3ba5201e7f9d2941625b1390042ff62dbddc4"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19808,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T16:59:01.214690",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x435082e5ffc11bd1ba7ad083f062e7d74b8fa5e8ad1bd9b0867deaa64549f029",
+      "block_number": 10003950,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.610618921924e-06,
+      "gas_cost_usd": 0.01402654730481,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x435082e5ffc11bd1ba7ad083f062e7d74b8fa5e8ad1bd9b0867deaa64549f029",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "8056b228-3d21-469e-8d57-bd5f90c4ea7c"
+  },
+  {
+    "job_id": "8c58ca6c-31c5-4af6-9997-24e6c5513ef1",
+    "proof_hash": "0x0b521ed093fb78738b155942fa810c35c1eca89f80cd9e4e4f173c6288ce1737",
+    "proof_bytes32": "0x0b521ed093fb78738b155942fa810c35c1eca89f80cd9e4e4f173c6288ce1737",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "iris-compatible-001",
+    "timestamp": "2026-01-08T17:04:36.171801Z",
+    "components": {
+      "input_hash": "0x359e075e79f1db8bb43831f30adbb3484e02767a8926d8282bfd49062c8c4f20",
+      "computation_hash": "0x99eeae3cbf331c73ab02a234678c75d2d227969b266c6e6ebd391903dc1dffed",
+      "model_hash": "0x921ce26d925add85aadd7e274fe933e7dab636b12fd3543983eb3b9eb0973714"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16938,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T17:04:49.479683",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xd9fa8b7cdc111fc3111c4d7fb152f166bc5afbb1d3ec0916afe9652c49db7b55",
+      "block_number": 10003974,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.09423955011e-06,
+      "gas_cost_usd": 0.015235598875275,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xd9fa8b7cdc111fc3111c4d7fb152f166bc5afbb1d3ec0916afe9652c49db7b55",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "e9625625-6f73-4352-8ca9-63a890bc5bdf"
+  },
+  {
+    "job_id": "b3c032e3-be10-4f80-a3e1-8bb6b80947df",
+    "proof_hash": "0xc7ac9d41ed1a284d8511994bde73f39b649ca83f8515556a075db975fc4d823d",
+    "proof_bytes32": "0xc7ac9d41ed1a284d8511994bde73f39b649ca83f8515556a075db975fc4d823d",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-mnist-onnx",
+    "timestamp": "2026-01-08T18:37:42.562332Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x489fd8668cd2dc99315ce61aa467517def83e5edb890bdefe2efe2e1f39f5627",
+      "model_hash": "0x86207d99eaf9eddf4ba4158aafe43a5a336c79fd75b950f26504734521a73677"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16009,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T18:38:01.170178",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xbb6e018087df5ebeda0b414c6f9a7084fb049222a9daf4bd614f3a5128de3b5c",
+      "block_number": 10004385,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.794328712564e-06,
+      "gas_cost_usd": 0.01448582178141,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xbb6e018087df5ebeda0b414c6f9a7084fb049222a9daf4bd614f3a5128de3b5c",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "a0d7a15a-a4f6-4ba0-974f-203b6d98a389"
+  },
+  {
+    "job_id": "f2695e1a-73f9-46fc-af94-4290d8367acb",
+    "proof_hash": "0x130a67b8e6d31144166998f78f8290ed80a2c8625d769648f88b9bc97078a9d0",
+    "proof_bytes32": "0x130a67b8e6d31144166998f78f8290ed80a2c8625d769648f88b9bc97078a9d0",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-mnist-onnx",
+    "timestamp": "2026-01-08T18:46:03.902624Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x489fd8668cd2dc99315ce61aa467517def83e5edb890bdefe2efe2e1f39f5627",
+      "model_hash": "0x86207d99eaf9eddf4ba4158aafe43a5a336c79fd75b950f26504734521a73677"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19578,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T18:47:07.765609",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x4ea285f8db0d855e6903801ddee93fc6dfff27dc9abc8423c1d87e1c60fbcd61",
+      "block_number": null,
+      "gas_used": null,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x4ea285f8db0d855e6903801ddee93fc6dfff27dc9abc8423c1d87e1c60fbcd61",
+      "contract_address": null,
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "84fe492e-f313-4f74-bce6-55a28c7ee23d"
+  },
+  {
+    "job_id": "819ac84d-9ed3-4331-828c-0ec8b44b036c",
+    "proof_hash": "0x88e02a8471371fca7762715a063a814196f50b29931aab6bb170b09a39779d9c",
+    "proof_bytes32": "0x88e02a8471371fca7762715a063a814196f50b29931aab6bb170b09a39779d9c",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-mnist-onnx",
+    "timestamp": "2026-01-08T18:50:30.731773Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x11bdc4cdfa09d97f22fb33c561faeb32f4fd0bb1b89b391bc3a8add26aa044dd",
+      "model_hash": "0x86207d99eaf9eddf4ba4158aafe43a5a336c79fd75b950f26504734521a73677"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18677,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T18:50:36.982492",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x2e789860af7eb4641a4464ba8f37081298472a653af8d3365d1f2a11cad0bfed",
+      "block_number": 10004441,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.82891313428e-06,
+      "gas_cost_usd": 0.0145722828357,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x2e789860af7eb4641a4464ba8f37081298472a653af8d3365d1f2a11cad0bfed",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "e2eeb5cb-7455-4d3f-bab3-e596a5e1c348"
+  },
+  {
+    "job_id": "af3bbb0e-c608-4992-9533-ee68fb96c4ee",
+    "proof_hash": "0x7ba64c4882332038481a28610746a81db48007136981d3ff44c7669df72eb530",
+    "proof_bytes32": "0x7ba64c4882332038481a28610746a81db48007136981d3ff44c7669df72eb530",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-mnist-onnx",
+    "timestamp": "2026-01-08T18:54:26.240470Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x4f53db56eefe2d924223faf94f8507735100d5559acc997caa8bf8e2f6308d01",
+      "model_hash": "0x86207d99eaf9eddf4ba4158aafe43a5a336c79fd75b950f26504734521a73677"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19095,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T18:54:50.208806",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xdd5c65bc0e8ffb9d1178a1bbf0171eac9b175e5003996d9c2c942384df044b1e",
+      "block_number": 10004461,
+      "gas_used": 282474,
+      "gas_cost_eth": 5.279127491178e-06,
+      "gas_cost_usd": 0.013197818727945,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xdd5c65bc0e8ffb9d1178a1bbf0171eac9b175e5003996d9c2c942384df044b1e",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "8faeb280-c68c-4c34-a50c-6506b485509f"
+  },
+  {
+    "job_id": "cd02c4a7-3890-410c-bae1-dacaf5ce001c",
+    "proof_hash": "0x828b0b8f14ed4a938e235bc4edb4eb05c35d0694fdb332c136ecbf35d80d7132",
+    "proof_bytes32": "0x828b0b8f14ed4a938e235bc4edb4eb05c35d0694fdb332c136ecbf35d80d7132",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-mnist-onnx",
+    "timestamp": "2026-01-08T18:57:40.884158Z",
+    "components": {
+      "input_hash": "0xe66131dfdcbfb030f64ca7a0b81d25b085c84a959c1baf4dd401c37b6187ae05",
+      "computation_hash": "0x4f53db56eefe2d924223faf94f8507735100d5559acc997caa8bf8e2f6308d01",
+      "model_hash": "0x86207d99eaf9eddf4ba4158aafe43a5a336c79fd75b950f26504734521a73677"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18649,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-08T18:57:49.512105",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x9610b6a40fbdbf3c9b75c09822baf3117f2e2a00319c0e75f2d7a222faec3349",
+      "block_number": 10004476,
+      "gas_used": 282474,
+      "gas_cost_eth": 6.147585612432e-06,
+      "gas_cost_usd": 0.015368964031079999,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0x9610b6a40fbdbf3c9b75c09822baf3117f2e2a00319c0e75f2d7a222faec3349",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "6cbc2f6a-9207-4066-b886-8eef29228d74"
+  },
+  {
+    "job_id": "7b0f29f7-951d-463d-9bd8-eaa3bda55e2f",
+    "proof_hash": "0x06a8261e73dbde1a841bcb2d3feb3d82cdcd7741e0537995cb80d51476a615cb",
+    "proof_bytes32": "0x06a8261e73dbde1a841bcb2d3feb3d82cdcd7741e0537995cb80d51476a615cb",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-mnist-onnx",
+    "timestamp": "2026-01-09T10:14:23.605258Z",
+    "components": {
+      "input_hash": "0xaefd2468fc62c404317413fe7fca7492f3b93ae661d045a6707a646f497866d6",
+      "computation_hash": "0xc32e1390df34d433f2fdc28f2c2d41a7a99f5d10ca68b515bf916f03432d670e",
+      "model_hash": "0x86207d99eaf9eddf4ba4158aafe43a5a336c79fd75b950f26504734521a73677"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17082,
+      "proving_time_ms": 3.44
+    },
+    "generated_at": "2026-01-09T10:14:38.342642",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xe86ec1c22cea82790440d01a8fc848445618488a3f8b0a354034eadc54266d4f",
+      "block_number": 10008476,
+      "gas_used": 282474,
+      "gas_cost_eth": 4.5655848909e-07,
+      "gas_cost_usd": 0.001141396222725,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xe86ec1c22cea82790440d01a8fc848445618488a3f8b0a354034eadc54266d4f",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "ae39ae3e-c1c4-41e8-af26-2d119a0e04b3"
+  }
+]

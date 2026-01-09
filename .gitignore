@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log
+.next/
+out/
+build/
+dist/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Storage / Artifacts
+backend/storage/ezkl_artifacts/
+*.srs
+*.pk
+*.vk
+*.compiled
+
