@@ -1,6 +1,6 @@
 """
 V-Inference Backend - Configuration
-Real Sepolia Testnet Integration
+Real Sepolia Testnet Integration with IPFS Decentralized Storage
 """
 import os
 
@@ -11,6 +11,29 @@ PORT = 8000
 
 # Database (JSON for simplicity)
 STORAGE_PATH = os.path.join(os.path.dirname(__file__), "..", "storage")
+
+# ============ IPFS Configuration (Decentralized Storage) ============
+# Provider options: "pinata", "infura", "local", "web3storage"
+IPFS_PROVIDER = os.getenv("IPFS_PROVIDER", "local")
+
+# Pinata (recommended for production) - https://pinata.cloud
+PINATA_API_KEY = os.getenv("PINATA_API_KEY", "")
+PINATA_SECRET_KEY = os.getenv("PINATA_SECRET_KEY", "")
+
+# Infura IPFS - https://infura.io
+INFURA_IPFS_PROJECT_ID = os.getenv("INFURA_IPFS_PROJECT_ID", "")
+INFURA_IPFS_PROJECT_SECRET = os.getenv("INFURA_IPFS_PROJECT_SECRET", "")
+
+# Local IPFS node
+LOCAL_IPFS_API = os.getenv("LOCAL_IPFS_API", "http://127.0.0.1:5001")
+
+# IPFS Gateways for retrieval
+IPFS_GATEWAYS = [
+    "https://ipfs.io/ipfs/",
+    "https://gateway.pinata.cloud/ipfs/",
+    "https://cloudflare-ipfs.com/ipfs/",
+    "https://dweb.link/ipfs/"
+]
 
 # Blockchain Configuration (Sepolia Testnet)
 SEPOLIA_RPC_URL = "https://ethereum-sepolia-rpc.publicnode.com"

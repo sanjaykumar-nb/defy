@@ -1,6 +1,11 @@
 """
 V-Inference Backend - Inference API
 Endpoints for running AI inference with ZKML verification and Sepolia anchoring
+
+DECENTRALIZATION FEATURES:
+1. On-chain proof anchoring (Sepolia blockchain)
+2. On-chain proof verification (trustless)
+3. Integration with decentralized escrow
 """
 from fastapi import APIRouter, HTTPException, BackgroundTasks
 from typing import Dict, Any
@@ -9,6 +14,8 @@ from datetime import datetime
 from ..core.database import db
 from ..models.schemas import InferenceInput, InferenceJob, JobStatus, APIResponse
 from ..services.zkml_simulator import inference_engine
+from ..services.onchain_verifier import on_chain_verifier
+from ..services.escrow_service import escrow_service
 
 router = APIRouter(prefix="/inference", tags=["Inference"])
 
@@ -211,10 +218,14 @@ async def list_jobs(user_id: str = None, model_id: str = None, limit: int = 50):
 
 
 @router.post("/verify-proof/{job_id}", response_model=APIResponse)
-async def verify_proof(job_id: str):
+async def verify_proof(job_id: str, verify_on_chain: bool = True):
     """
     Verify the ZK proof for a completed inference job.
-    Checks on-chain verification if proof was anchored on Sepolia.
+    
+    DECENTRALIZED VERIFICATION:
+    - When verify_on_chain=True, verification happens against blockchain record
+    - This is TRUSTLESS - no need to trust the backend!
+    - Anyone can verify by checking the on-chain proof hash
     """
     job = db.get_job(job_id)
     if not job:
@@ -224,8 +235,23 @@ async def verify_proof(job_id: str):
     if not proof:
         raise HTTPException(status_code=404, detail="No proof found for this job")
     
-    # Run verification (includes on-chain check)
+    # Local verification first
     is_valid, message, verification_details = inference_engine.zkml.verify_proof(proof)
+    
+    # ON-CHAIN VERIFICATION (Decentralized!)
+    on_chain_verification = None
+    if verify_on_chain and proof.get("on_chain", {}).get("anchored"):
+        on_chain_verification = await on_chain_verifier.verify_proof_on_chain(
+            job_id=job_id,
+            proof_hash=proof.get("proof_hash")
+        )
+        
+        # Override local result with on-chain result if available
+        if on_chain_verification and not on_chain_verification.get("simulated"):
+            is_valid = on_chain_verification.get("verified", False)
+            message = on_chain_verification.get("message", message)
+            verification_details["on_chain_verification"] = on_chain_verification
+    
     gas_estimate = inference_engine.zkml.estimate_gas_cost()
     
     # Update job status
@@ -254,8 +280,63 @@ async def verify_proof(job_id: str):
                 "contract_address": on_chain_info.get("contract_address"),
                 "transaction_hash": on_chain_info.get("transaction_hash"),
                 "block_number": on_chain_info.get("block_number"),
-                "explorer_url": on_chain_info.get("explorer_url")
-            }
+                "explorer_url": on_chain_info.get("explorer_url"),
+                "on_chain_verified": on_chain_verification.get("verified") if on_chain_verification else None
+            },
+            "decentralized_verification": on_chain_verification
+        }
+    )
+
+
+@router.post("/verify-on-chain/{job_id}", response_model=APIResponse)
+async def verify_on_chain_only(job_id: str):
+    """
+    Verify proof ONLY using on-chain data (fully decentralized).
+    
+    This endpoint:
+    1. Reads the proof hash from the blockchain
+    2. Compares it with the provided proof
+    3. Returns verification result WITHOUT trusting the backend
+    
+    USE THIS FOR TRUSTLESS VERIFICATION!
+    """
+    job = db.get_job(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    
+    proof = db.get_proof_by_job(job_id)
+    proof_hash = proof.get("proof_hash") if proof else job.get("proof_hash")
+    
+    if not proof_hash:
+        raise HTTPException(status_code=404, detail="No proof hash found for this job")
+    
+    # Verify directly on-chain
+    result = await on_chain_verifier.verify_proof_on_chain(
+        job_id=job_id,
+        proof_hash=proof_hash
+    )
+    
+    # Update job if verified
+    if result.get("verified"):
+        db.update_job(job_id, {
+            "status": "verified",
+            "verification_status": "on_chain_verified"
+        })
+    
+    return APIResponse(
+        success=True,
+        message=result.get("message", "Verification complete"),
+        data={
+            "job_id": job_id,
+            "verified": result.get("verified", False),
+            "on_chain_hash": result.get("on_chain_hash"),
+            "provided_hash": result.get("provided_hash"),
+            "block_number": result.get("block_number"),
+            "auditor": result.get("auditor"),
+            "explorer_url": result.get("explorer_url"),
+            "chain": "Sepolia",
+            "trustless": not result.get("simulated", True),
+            "simulated": result.get("simulated", False)
         }
     )
 

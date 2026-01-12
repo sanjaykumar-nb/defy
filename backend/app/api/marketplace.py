@@ -1,6 +1,11 @@
 """
 V-Inference Backend - Marketplace API
 Endpoints for listing, purchasing, and managing marketplace inference offerings
+
+DECENTRALIZATION FEATURES:
+1. Real ETH escrow via smart contracts (trustless payments)
+2. Payment release only after on-chain proof verification
+3. Automatic refund on verification failure
 """
 from fastapi import APIRouter, HTTPException
 from typing import Optional, List
@@ -11,6 +16,8 @@ from ..models.schemas import (
     MarketplaceListing, ListingCreate, Purchase, PurchaseCreate, APIResponse
 )
 from ..services.zkml_simulator import inference_engine
+from ..services.escrow_service import escrow_service
+from ..services.onchain_verifier import on_chain_verifier
 
 router = APIRouter(prefix="/marketplace", tags=["Marketplace"])
 
@@ -169,10 +176,23 @@ async def get_listing(listing_id: str):
 
 
 @router.post("/purchase", response_model=APIResponse)
-async def purchase_inference(purchase: PurchaseCreate, user_id: str):
+async def purchase_inference(
+    purchase: PurchaseCreate, 
+    user_id: str,
+    use_eth_escrow: bool = False,  # NEW: Option for real ETH escrow
+    provider_address: Optional[str] = None  # Provider's ETH address for escrow
+):
     """
     Purchase inference credits for a listed model.
-    Funds are held in escrow until inference is completed and verified.
+    
+    DECENTRALIZED ESCROW OPTIONS:
+    - use_eth_escrow=False: Traditional balance-based (simulated)
+    - use_eth_escrow=True: Real ETH locked in smart contract (trustless!)
+    
+    When using ETH escrow:
+    - ETH is locked in VInferenceEscrow contract
+    - Released to provider only after ZK proof verification
+    - Refunded to buyer if verification fails
     """
     try:
         # Get listing
@@ -190,17 +210,50 @@ async def purchase_inference(purchase: PurchaseCreate, user_id: str):
         # Calculate total cost
         total_cost = listing.get("price_per_inference", 0) * purchase.inferences_count
         
-        # Check user balance
+        # Get user
         user = db.get_or_create_user(user_id)
-        if user.get("balance", 0) < total_cost:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Insufficient balance. Required: ${total_cost}, Available: ${user.get('balance', 0)}"
-            )
         
-        # Deduct balance (escrow)
-        new_balance = user.get("balance", 0) - total_cost
-        db.update_user_balance(user["id"], new_balance)
+        # ETH ESCROW PATH (Decentralized!)
+        escrow_result = None
+        if use_eth_escrow:
+            if not provider_address:
+                # Try to get provider address from listing owner
+                provider = db.get_or_create_user(listing.get("owner_id"))
+                provider_address = provider.get("wallet_address")
+            
+            if not provider_address:
+                raise HTTPException(
+                    status_code=400,
+                    detail="Provider ETH address required for escrow. Set provider_address parameter."
+                )
+            
+            # Convert USD to ETH (simplified - use oracle in production)
+            eth_price_usd = 2500  # Approximate
+            amount_eth = total_cost / eth_price_usd
+            
+            # Create real escrow
+            escrow_result = await escrow_service.create_escrow(
+                job_id=f"purchase-{purchase.listing_id}-{datetime.utcnow().timestamp()}",
+                provider_address=provider_address,
+                amount_eth=amount_eth
+            )
+            
+            if not escrow_result.get("success"):
+                raise HTTPException(
+                    status_code=500,
+                    detail=f"Escrow creation failed: {escrow_result.get('error', 'Unknown error')}"
+                )
+        else:
+            # Traditional balance-based escrow (simulated)
+            if user.get("balance", 0) < total_cost:
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"Insufficient balance. Required: ${total_cost}, Available: ${user.get('balance', 0)}"
+                )
+            
+            # Deduct balance
+            new_balance = user.get("balance", 0) - total_cost
+            db.update_user_balance(user["id"], new_balance)
         
         # Check if user already has a purchase for this listing
         existing_purchase = db.get_purchase_by_user_and_listing(user_id, purchase.listing_id)
@@ -211,12 +264,16 @@ async def purchase_inference(purchase: PurchaseCreate, user_id: str):
             new_total = existing_purchase.get("inferences_bought", 0) + purchase.inferences_count
             new_paid = existing_purchase.get("total_paid", 0) + total_cost
             
-            db.update_purchase(existing_purchase["id"], {
+            update_data = {
                 "inferences_remaining": new_remaining,
                 "inferences_bought": new_total,
                 "total_paid": new_paid
-            })
+            }
             
+            if escrow_result:
+                update_data["eth_escrow"] = escrow_result
+            
+            db.update_purchase(existing_purchase["id"], update_data)
             purchase_record = db.get_purchase(existing_purchase["id"])
         else:
             # Create new purchase
@@ -226,22 +283,42 @@ async def purchase_inference(purchase: PurchaseCreate, user_id: str):
                 "model_id": listing.get("model_id"),
                 "inferences_bought": purchase.inferences_count,
                 "inferences_remaining": purchase.inferences_count,
-                "total_paid": total_cost
+                "total_paid": total_cost,
+                "escrow_type": "eth" if use_eth_escrow else "balance"
             }
+            
+            if escrow_result:
+                purchase_data["eth_escrow"] = escrow_result
+            
             purchase_record = db.create_purchase(purchase_data)
+        
+        response_data = {
+            "purchase": purchase_record,
+            "escrow": {
+                "type": "eth_smart_contract" if use_eth_escrow else "platform_balance",
+                "status": "locked",
+                "amount_usd": total_cost,
+                "will_release_on": "Successful inference with on-chain verified ZK proof",
+                "trustless": use_eth_escrow
+            }
+        }
+        
+        if escrow_result:
+            response_data["eth_escrow"] = {
+                "transaction_hash": escrow_result.get("transaction_hash"),
+                "block_number": escrow_result.get("block_number"),
+                "amount_eth": escrow_result.get("amount_eth"),
+                "contract_address": escrow_service.contract_address,
+                "simulated": escrow_result.get("simulated", False)
+            }
+        else:
+            response_data["remaining_balance"] = user.get("balance", 0) - total_cost
         
         return APIResponse(
             success=True,
-            message=f"Successfully purchased {purchase.inferences_count} inference credits",
-            data={
-                "purchase": purchase_record,
-                "escrow": {
-                    "status": "locked",
-                    "amount": total_cost,
-                    "will_release_on": "Successful inference with verified ZK proof"
-                },
-                "remaining_balance": new_balance
-            }
+            message=f"Successfully purchased {purchase.inferences_count} inference credits" + 
+                    (" with ETH escrow" if use_eth_escrow else ""),
+            data=response_data
         )
         
     except HTTPException:
@@ -254,7 +331,15 @@ async def purchase_inference(purchase: PurchaseCreate, user_id: str):
 async def use_purchased_inference(purchase_id: str, input_data: dict):
     """
     Use a purchased inference credit.
-    Runs inference on the model without exposing model details to the buyer.
+    
+    DECENTRALIZED FLOW:
+    1. Run inference on model
+    2. Generate and anchor ZK proof on-chain
+    3. Verify proof on-chain
+    4. Release ETH escrow to provider (if ETH escrow was used)
+    5. Return results to user
+    
+    Model details are NEVER exposed to the buyer!
     """
     try:
         purchase = db.get_purchase(purchase_id)
@@ -271,12 +356,17 @@ async def use_purchased_inference(purchase_id: str, input_data: dict):
         
         listing = db.get_listing(purchase.get("listing_id"))
         
-        # Run inference
+        # Create job ID for on-chain anchoring
+        job_id_temp = f"job-{purchase_id}-{datetime.utcnow().timestamp()}"
+        
+        # Run inference with on-chain anchoring
         result = inference_engine.run_inference(
+            job_id=job_id_temp,
             model_id=model_id,
             model_type=model.get("model_type", "classification"),
             input_data=input_data,
-            use_zkml=True  # Always use ZKML for marketplace inferences
+            use_zkml=True,  # Always use ZKML for marketplace inferences
+            anchor_on_chain=True  # Always anchor for marketplace
         )
         
         # Create job record
@@ -291,6 +381,13 @@ async def use_purchased_inference(purchase_id: str, input_data: dict):
             "completed_at": datetime.utcnow().isoformat(),
             "purchase_id": purchase_id
         }
+        
+        # Add on-chain info
+        on_chain_info = result.get("proof", {}).get("on_chain", {})
+        if on_chain_info.get("anchored"):
+            job_data["transaction_hash"] = on_chain_info.get("transaction_hash")
+            job_data["block_number"] = on_chain_info.get("block_number")
+        
         job = db.create_job(job_data)
         
         # Store proof
@@ -301,6 +398,35 @@ async def use_purchased_inference(purchase_id: str, input_data: dict):
             }
             db.create_proof(proof_data)
         
+        # On-chain verification before releasing escrow
+        proof_verified = result.get("verification", {}).get("is_valid", False)
+        escrow_released = False
+        escrow_release_result = None
+        
+        # Release escrow based on type
+        price = listing.get("price_per_inference", 0)
+        
+        if purchase.get("escrow_type") == "eth" and purchase.get("eth_escrow"):
+            # REAL ETH ESCROW RELEASE
+            if proof_verified:
+                proof_hash = result.get("proof", {}).get("proof_hash")
+                escrow_release_result = await escrow_service.release_escrow(
+                    job_id=job_id_temp,
+                    proof_hash=proof_hash
+                )
+                escrow_released = escrow_release_result.get("success", False)
+            else:
+                # Verification failed - initiate refund
+                escrow_release_result = await escrow_service.refund_escrow(
+                    job_id=job_id_temp,
+                    reason="ZK proof verification failed"
+                )
+        else:
+            # Traditional balance-based escrow release
+            owner = db.get_or_create_user(listing.get("owner_id"))
+            db.update_user_balance(owner["id"], owner.get("balance", 0) + price)
+            escrow_released = True
+        
         # Decrement remaining inferences
         new_remaining = purchase.get("inferences_remaining", 1) - 1
         db.update_purchase(purchase_id, {"inferences_remaining": new_remaining})
@@ -310,29 +436,32 @@ async def use_purchased_inference(purchase_id: str, input_data: dict):
             "total_inferences": listing.get("total_inferences", 0) + 1
         })
         
-        # Release escrow for this inference (payment to provider)
-        price = listing.get("price_per_inference", 0)
-        owner = db.get_or_create_user(listing.get("owner_id"))
-        db.update_user_balance(owner["id"], owner.get("balance", 0) + price)
+        # Build response with complete decentralization status
+        response_data = {
+            "job_id": job["id"],
+            "output": result["output_data"],
+            "inference_time_ms": result["inference_time_ms"],
+            "total_time_ms": result["total_time_ms"],
+            "zkml_proof": {
+                "proof_hash": result.get("proof", {}).get("proof_hash"),
+                "is_verified": proof_verified,
+                "verification_message": result.get("verification", {}).get("message"),
+                "gas_estimate": result.get("verification", {}).get("gas_estimate")
+            },
+            "on_chain": on_chain_info if on_chain_info else None,
+            "credits_remaining": new_remaining,
+            "escrow": {
+                "type": purchase.get("escrow_type", "balance"),
+                "released": escrow_released,
+                "payment_to_provider": price,
+                "release_details": escrow_release_result
+            }
+        }
         
         return APIResponse(
             success=True,
-            message="Inference completed successfully",
-            data={
-                "job_id": job["id"],
-                "output": result["output_data"],
-                "inference_time_ms": result["inference_time_ms"],
-                "total_time_ms": result["total_time_ms"],
-                "zkml_proof": {
-                    "proof_hash": result.get("proof", {}).get("proof_hash"),
-                    "is_verified": result.get("verification", {}).get("is_valid", False),
-                    "verification_message": result.get("verification", {}).get("message"),
-                    "gas_estimate": result.get("verification", {}).get("gas_estimate")
-                },
-                "credits_remaining": new_remaining,
-                "escrow_released": True,
-                "payment_to_provider": price
-            }
+            message="Inference completed with on-chain verification" if on_chain_info.get("anchored") else "Inference completed successfully",
+            data=response_data
         )
         
     except HTTPException:

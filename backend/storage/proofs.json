@@ -1836,5 +1836,46 @@
       "chain_id": 11155111
     },
     "id": "ae39ae3e-c1c4-41e8-af26-2d119a0e04b3"
+  },
+  {
+    "job_id": "87ffcd30-2615-4a56-9116-909e1523eebd",
+    "proof_hash": "0x57ddca66112a2927188f66986cca41956646fb254705632e05e21cb11a79a498",
+    "proof_bytes32": "0x57ddca66112a2927188f66986cca41956646fb254705632e05e21cb11a79a498",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-11T17:42:46.665624Z",
+    "components": {
+      "input_hash": "0x5c9c42d66aeafc6bf6135145dedd0983afbf6d6f68233b78992a319ad81db879",
+      "computation_hash": "0x9205dbb69c9324fce511b274cc3cdd9047847e7fd576593245badeae327099af",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15405,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-11T17:43:02.273861",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xd3b4cf773551d18b6dfa5f0988d96490ff50eed94a45b80c345826b63da3ccc9",
+      "block_number": 10023135,
+      "gas_used": 282474,
+      "gas_cost_eth": 2.97734940324e-07,
+      "gas_cost_usd": 0.0007443373508099999,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xd3b4cf773551d18b6dfa5f0988d96490ff50eed94a45b80c345826b63da3ccc9",
+      "contract_address": "0x93a8451B29af5c7596Ee569305e7eEe5C1e8ac52",
+      "chain": "Sepolia",
+      "chain_id": 11155111
+    },
+    "id": "bc3b586a-dd08-4190-979e-1605b6a33c54"
   }
 ]

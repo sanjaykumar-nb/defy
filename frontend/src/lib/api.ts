@@ -17,6 +17,10 @@ export interface AIModel {
     owner_id: string;
     is_public: boolean;
     file_path?: string;
+    // IPFS Storage (Decentralized)
+    ipfs_cid?: string;
+    ipfs_gateway_url?: string;
+    storage_type?: "local" | "ipfs" | "both";
     metadata: Record<string, unknown>;
     total_inferences: number;
     average_latency_ms: number;
@@ -65,6 +69,16 @@ export interface Purchase {
     inferences_remaining: number;
     total_paid: number;
     escrow_status: "locked" | "released" | "refunded";
+    // ETH Escrow (Decentralized)
+    escrow_type?: "balance" | "eth";
+    eth_escrow?: {
+        job_id: string;
+        amount_eth: number;
+        transaction_hash?: string;
+        block_number?: number;
+        status: "locked" | "released" | "refunded";
+        simulated: boolean;
+    };
     created_at: string;
     listing_name?: string;
     listing_price?: number;
@@ -366,5 +380,141 @@ export async function getPlatformStats(): Promise<{
     network: Record<string, string>;
 }> {
     const res = await fetch(`${API_BASE}/api/stats`);
+    return res.json();
+}
+
+// ====== DECENTRALIZATION FEATURES ======
+
+// IPFS Model Upload
+export async function uploadModelToIPFS(formData: FormData): Promise<APIResponse<AIModel & {
+    ipfs_cid: string;
+    ipfs_gateway_url: string;
+    storage_type: string;
+}>> {
+    // Ensure use_ipfs is set
+    formData.set('use_ipfs', 'true');
+    const res = await fetch(`${API_BASE}/api/models/upload`, {
+        method: "POST",
+        body: formData,
+    });
+    return res.json();
+}
+
+// On-Chain Verification
+export async function verifyProofOnChain(
+    jobId: string
+): Promise<APIResponse<{
+    job_id: string;
+    verified_on_chain: boolean;
+    verification: {
+        is_valid: boolean;
+        message: string;
+        timestamp?: string;
+        block_number?: number;
+        transaction_hash?: string;
+    };
+    original_proof: {
+        proof_hash: string;
+        anchored: boolean;
+        block_number?: number;
+    };
+}>> {
+    const res = await fetch(`${API_BASE}/api/inference/verify-on-chain/${jobId}`);
+    return res.json();
+}
+
+// Purchase with ETH Escrow
+export async function purchaseWithEthEscrow(
+    listingId: string,
+    inferencesCount: number,
+    userId: string,
+    providerAddress: string
+): Promise<APIResponse<{
+    purchase: Purchase;
+    escrow: {
+        type: "eth";
+        job_id: string;
+        amount_eth: number;
+        transaction_hash?: string;
+        block_number?: number;
+        status: "locked" | "released" | "refunded";
+        simulated: boolean;
+    };
+    remaining_balance?: number;
+}>> {
+    const res = await fetch(
+        `${API_BASE}/api/marketplace/purchase?user_id=${userId}`,
+        {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                listing_id: listingId,
+                inferences_count: inferencesCount,
+                use_eth_escrow: true,
+                provider_address: providerAddress,
+            }),
+        }
+    );
+    return res.json();
+}
+
+// Enhanced use-inference with escrow info
+export interface UseInferenceResult {
+    job_id: string;
+    output: Record<string, unknown>;
+    inference_time_ms: number;
+    total_time_ms: number;
+    zkml_proof: {
+        proof_hash: string;
+        is_verified: boolean;
+        verification_message: string;
+        gas_estimate: Record<string, unknown>;
+    };
+    on_chain?: {
+        anchored: boolean;
+        transaction_hash?: string;
+        block_number?: number;
+    };
+    credits_remaining: number;
+    escrow: {
+        type: "eth" | "balance";
+        released: boolean;
+        payment_to_provider: number;
+        release_details?: {
+            success: boolean;
+            transaction_hash?: string;
+            block_number?: number;
+            simulated?: boolean;
+        };
+    };
+}
+
+export async function usePurchasedInferenceDecentralized(
+    purchaseId: string,
+    inputData: Record<string, unknown>
+): Promise<APIResponse<UseInferenceResult>> {
+    const res = await fetch(
+        `${API_BASE}/api/marketplace/use-inference/${purchaseId}`,
+        {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(inputData),
+        }
+    );
+    return res.json();
+}
+
+// Get proof verification status from blockchain
+export async function getOnChainAudit(
+    jobId: string
+): Promise<APIResponse<{
+    job_id: string;
+    anchored: boolean;
+    proof_hash?: string;
+    timestamp?: string;
+    block_number?: number;
+    transaction_hash?: string;
+}>> {
+    const res = await fetch(`${API_BASE}/api/inference/verify-on-chain/${jobId}`);
     return res.json();
 }

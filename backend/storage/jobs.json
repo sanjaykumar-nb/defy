@@ -3267,5 +3267,62 @@
     "verification_status": "Proof verified on-chain \u2713",
     "transaction_hash": "0xe86ec1c22cea82790440d01a8fc848445618488a3f8b0a354034eadc54266d4f",
     "block_number": 10008476
+  },
+  {
+    "model_id": "model-creditcard-v2",
+    "user_id": "demo_user",
+    "input_data": {
+      "features": [
+        0.5,
+        0.8,
+        0.3,
+        0.7,
+        0.2,
+        0.9,
+        0.4,
+        0.6,
+        0.1,
+        0.8,
+        0.5,
+        0.3,
+        0.7,
+        0.2,
+        0.9,
+        0.4,
+        0.6,
+        0.1,
+        0.8,
+        0.5,
+        0.3,
+        0.7,
+        0.5,
+        0.2,
+        0.9,
+        0.4,
+        0.6,
+        0.1
+      ]
+    },
+    "use_zkml": true,
+    "id": "87ffcd30-2615-4a56-9116-909e1523eebd",
+    "created_at": "2026-01-11T17:42:45.672144",
+    "status": "completed",
+    "output_data": {
+      "prediction": "class_0",
+      "predicted_class_index": 0,
+      "confidence": 0.5026,
+      "real_inference": true,
+      "model_file": "creditcard_v2.pkl",
+      "class_probabilities": {
+        "class_0": 0.5026,
+        "class_1": 0.4974
+      }
+    },
+    "completed_at": "2026-01-11T17:43:02.235080",
+    "latency_ms": 16502.55,
+    "proof_hash": "0x57ddca66112a2927188f66986cca41956646fb254705632e05e21cb11a79a498",
+    "verification_status": "Proof verified on-chain \u2713",
+    "transaction_hash": "0xd3b4cf773551d18b6dfa5f0988d96490ff50eed94a45b80c345826b63da3ccc9",
+    "block_number": 10023135
   }
 ]

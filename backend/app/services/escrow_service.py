@@ -1,8 +1,10 @@
 """
 V-Inference Backend - Escrow Service
-Integrates with the VInferenceEscrow smart contract on Sepolia
+Real ETH Escrow via VInferenceEscrow smart contract on Sepolia
+Handles trustless payments between buyers and model providers
 """
 import os
+import hashlib
 from typing import Dict, Any, Optional
 from datetime import datetime
 from web3 import Web3
@@ -11,7 +13,8 @@ from ..core.config import (
     SEPOLIA_RPC_URL, 
     CHAIN_ID, 
     PRIVATE_KEY,
-    ESCROW_CONTRACT_ADDRESS
+    ESCROW_CONTRACT_ADDRESS,
+    SEPOLIA_EXPLORER
 )
 
 # Escrow Contract ABI (key functions only)
@@ -92,19 +95,19 @@ ESCROW_ABI = [
     }
 ]
 
-# Escrow contract address (to be set after deployment)
-ESCROW_CONTRACT_ADDRESS = os.getenv("ESCROW_CONTRACT_ADDRESS", "")
-
 
 class EscrowService:
     """
-    Service for interacting with the VInferenceEscrow smart contract
+    Real ETH Escrow Service for V-Inference Marketplace
     
-    Flow:
-    1. Buyer creates escrow → ETH locked in contract
+    DECENTRALIZED PAYMENT FLOW:
+    1. Buyer purchases inference → ETH locked in smart contract
     2. Provider runs inference → Generates ZK proof
-    3. Proof verified → ETH released to provider
-    4. If proof fails → ETH refunded to buyer
+    3. Proof anchored on-chain → Verification
+    4. On successful verification → ETH released to provider
+    5. On failed verification → ETH refunded to buyer
+    
+    This removes the need to trust any centralized party!
     """
     
     def __init__(self):
@@ -112,11 +115,12 @@ class EscrowService:
         self.w3 = None
         self.account = None
         self.contract = None
+        self.contract_address = ESCROW_CONTRACT_ADDRESS
         
         self._connect()
     
     def _connect(self):
-        """Connect to Sepolia and initialize contract"""
+        """Connect to Sepolia and initialize escrow contract"""
         try:
             if not SEPOLIA_RPC_URL:
                 print("⚠️ Escrow: No RPC URL configured")
@@ -131,18 +135,21 @@ class EscrowService:
             # Setup account
             if PRIVATE_KEY:
                 self.account = self.w3.eth.account.from_key(PRIVATE_KEY)
+                balance = self.w3.eth.get_balance(self.account.address)
+                balance_eth = float(self.w3.from_wei(balance, 'ether'))
+                print(f"💰 Escrow account: {self.account.address} ({balance_eth:.4f} ETH)")
             
             # Setup contract if address is configured
-            if ESCROW_CONTRACT_ADDRESS:
+            if self.contract_address:
                 self.contract = self.w3.eth.contract(
-                    address=Web3.to_checksum_address(ESCROW_CONTRACT_ADDRESS),
+                    address=Web3.to_checksum_address(self.contract_address),
                     abi=ESCROW_ABI
                 )
-                print(f"✅ Escrow contract connected: {ESCROW_CONTRACT_ADDRESS}")
+                print(f"✅ Escrow contract connected: {self.contract_address}")
+                self.connected = True
             else:
-                print("⚠️ Escrow: Contract address not set (not deployed yet)")
-            
-            self.connected = True
+                print("⚠️ Escrow: Contract address not set")
+                self.connected = False
             
         except Exception as e:
             print(f"❌ Escrow connection error: {e}")

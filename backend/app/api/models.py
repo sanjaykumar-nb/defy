@@ -1,19 +1,22 @@
 """
 V-Inference Backend - Models API
 Endpoints for AI model upload, management, and retrieval
+Now with IPFS decentralized storage support!
 """
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 from typing import Optional, List
 import os
 import shutil
+import tempfile
 from pathlib import Path
 
 from ..core.database import db
 from ..models.schemas import AIModel, AIModelCreate, APIResponse
+from ..services.ipfs_service import ipfs_service
 
 router = APIRouter(prefix="/models", tags=["Models"])
 
-# Storage path for uploaded models
+# Local storage path (used as cache and fallback)
 MODELS_STORAGE_PATH = Path("storage/models")
 MODELS_STORAGE_PATH.mkdir(parents=True, exist_ok=True)
 
@@ -25,10 +28,17 @@ async def upload_model(
     model_type: str = Form("onnx"),
     is_public: bool = Form(False),
     owner_id: str = Form(...),
+    use_ipfs: bool = Form(True),  # NEW: Option to upload to IPFS
     file: UploadFile = File(...)
 ):
     """
     Upload a new AI model to the platform.
+    
+    DECENTRALIZED STORAGE:
+    - When use_ipfs=True, model is uploaded to IPFS and CID is stored
+    - Model can be retrieved from any IPFS gateway worldwide
+    - Content-addressed: CID guarantees file integrity
+    
     Supports ONNX, PyTorch, and TensorFlow model files.
     """
     try:
@@ -58,28 +68,67 @@ async def upload_model(
         
         model = db.create_model(model_data)
         
-        # Save file with model ID
-        file_path = MODELS_STORAGE_PATH / f"{model['id']}{file_ext}"
-        with open(file_path, "wb") as buffer:
+        # Save file locally first (temp or permanent)
+        local_file_path = MODELS_STORAGE_PATH / f"{model['id']}{file_ext}"
+        with open(local_file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
         
-        # Update model with file path and size
-        file_size = os.path.getsize(file_path)
-        db.update_model(model['id'], {
-            "file_path": str(file_path),
+        file_size = os.path.getsize(local_file_path)
+        
+        # IPFS Upload
+        ipfs_result = None
+        if use_ipfs:
+            ipfs_result = await ipfs_service.upload_file(
+                str(local_file_path),
+                metadata={
+                    "model_id": model['id'],
+                    "model_name": name,
+                    "model_type": model_type,
+                    "owner": owner_id
+                }
+            )
+            
+            if ipfs_result.get("success"):
+                print(f"✅ Model uploaded to IPFS: {ipfs_result.get('cid')}")
+            else:
+                print(f"⚠️ IPFS upload failed, using local storage: {ipfs_result.get('error')}")
+        
+        # Update model with file info and IPFS data
+        update_data = {
+            "file_path": str(local_file_path),
             "metadata": {
                 **model['metadata'],
                 "file_size": file_size,
                 "file_size_mb": round(file_size / (1024 * 1024), 2)
             }
-        })
+        }
         
+        # Add IPFS info if available
+        if ipfs_result and ipfs_result.get("success"):
+            update_data["ipfs_cid"] = ipfs_result.get("cid")
+            update_data["ipfs_gateway_url"] = ipfs_result.get("gateway_url")
+            update_data["storage_type"] = "ipfs" if not ipfs_result.get("simulated") else "ipfs_simulated"
+            update_data["metadata"]["ipfs"] = {
+                "cid": ipfs_result.get("cid"),
+                "gateway_url": ipfs_result.get("gateway_url"),
+                "provider": ipfs_result.get("provider"),
+                "upload_timestamp": ipfs_result.get("upload_timestamp"),
+                "simulated": ipfs_result.get("simulated", False)
+            }
+        else:
+            update_data["storage_type"] = "local"
+        
+        db.update_model(model['id'], update_data)
         model = db.get_model(model['id'])
         
         return APIResponse(
             success=True,
-            message="Model uploaded successfully",
-            data=model
+            message="Model uploaded successfully" + (" to IPFS" if ipfs_result and ipfs_result.get("success") else " (local storage)"),
+            data={
+                **model,
+                "ipfs": ipfs_result if ipfs_result else None,
+                "decentralized": ipfs_result.get("success", False) if ipfs_result else False
+            }
         )
         
     except HTTPException:
