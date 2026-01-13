@@ -104,7 +104,7 @@
     "reward": 0.05,
     "is_confidential": true,
     "encrypted_threshold": "0xc4ba56902374b7d8d74289c3492849e06fd50aa90f817b04b1c2d35ba28fa852",
-    "status": "sharding",
+    "status": "processing",
     "created_at": "2026-01-13T09:09:39.143311",
     "shards": [
       {
@@ -166,24 +166,24 @@
       {
         "shard_id": "1a18d9a3-af5b-46d9-839e-cd7eebe261f7-shard-7",
         "shard_index": 7,
-        "status": "pending",
-        "worker_id": null,
+        "status": "processing",
+        "worker_id": "WORKER-F7D136F1",
         "progress": 0,
         "result_url": null
       },
       {
         "shard_id": "1a18d9a3-af5b-46d9-839e-cd7eebe261f7-shard-8",
         "shard_index": 8,
-        "status": "pending",
-        "worker_id": null,
+        "status": "processing",
+        "worker_id": "WORKER-F7D136F1",
         "progress": 0,
         "result_url": null
       },
       {
         "shard_id": "1a18d9a3-af5b-46d9-839e-cd7eebe261f7-shard-9",
         "shard_index": 9,
-        "status": "pending",
-        "worker_id": null,
+        "status": "processing",
+        "worker_id": "WORKER-F7D136F1",
         "progress": 0,
         "result_url": null
       }
