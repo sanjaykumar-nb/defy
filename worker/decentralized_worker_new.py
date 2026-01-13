@@ -45,8 +45,8 @@ class TunnelManager:
     def start(self, on_connect_callback=None):
         """Start the SSH tunnel in a separate thread"""
         def tunnel_thread():
-            # Command: ssh -R 80:127.0.0.1:PORT serveo.net
-            cmd = ["ssh", "-o", "StrictHostKeyChecking=no", "-R", f"80:127.0.0.1:{self.port}", "serveo.net"]
+            # Command: ssh -R 80:localhost:PORT serveo.net
+            cmd = ["ssh", "-o", "StrictHostKeyChecking=no", "-R", f"80:localhost:{self.port}", "serveo.net"]
             
             try:
                 self.process = subprocess.Popen(
@@ -494,8 +494,7 @@ class DecentralizedWorker:
                 "mem_percent": psutil.virtual_memory().percent,
                 "is_registered": self.blockchain.is_registered() if hasattr(self, 'blockchain') else False,
                 "current_shard": getattr(self, 'current_shard', None),
-                "shards_completed": getattr(self, 'shards_completed', 0),
-                "public_url": self.tunnel.public_url if hasattr(self, 'tunnel') else None
+                "shards_completed": getattr(self, 'shards_completed', 0)
             }
 
         @self.app.get("/benchmark")

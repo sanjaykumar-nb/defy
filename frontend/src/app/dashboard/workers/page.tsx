@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 // Icons
 const ServerIcon = () => (
@@ -258,6 +259,14 @@ export default function WorkersPage() {
                                             )}
                                         </td>
                                         <td className="py-4">{worker.stake.toFixed(3)} SHM</td>
+                                        <td className="py-4">
+                                            <Link
+                                                href={`/dashboard/workers/${worker.node_id}`}
+                                                className="px-3 py-1.5 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-500/20 text-[10px] font-bold tracking-widest uppercase transition-all"
+                                            >
+                                                Track Profile
+                                            </Link>
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>

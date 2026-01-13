@@ -1,1 +1,246 @@
-[]
+[
+  {
+    "id": "model-fraud-detection-v2",
+    "name": "Fraud Detection Model",
+    "description": "Fraud Detection Model - Machine Learning model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/fraud_detection_v2.pkl",
+    "metadata": {
+      "features": 30,
+      "file": "fraud_detection_v2.pkl"
+    },
+    "total_inferences": 9,
+    "average_latency_ms": 7876.08,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-churn-predictor-v2",
+    "name": "Customer Churn Predictor",
+    "description": "Customer Churn Predictor - Machine Learning model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/churn_predictor_v2.pkl",
+    "metadata": {
+      "features": 20,
+      "file": "churn_predictor_v2.pkl"
+    },
+    "total_inferences": 0,
+    "average_latency_ms": 0,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-creditcard-v2",
+    "name": "Credit Card Fraud Detector",
+    "description": "Credit Card Fraud Detector - Machine Learning model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/creditcard_v2.pkl",
+    "metadata": {
+      "features": 28,
+      "file": "creditcard_v2.pkl"
+    },
+    "total_inferences": 2,
+    "average_latency_ms": 9893.6,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-home-price-v2",
+    "name": "Home Price Predictor",
+    "description": "Home Price Predictor - Machine Learning model",
+    "model_type": "regression",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/home_price_v2.pkl",
+    "metadata": {
+      "features": 13,
+      "file": "home_price_v2.pkl"
+    },
+    "total_inferences": 1,
+    "average_latency_ms": 6180.32,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-resume-classifier-v2",
+    "name": "Resume Classifier",
+    "description": "Resume Classifier - Machine Learning model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/resume_classifier_v2.pkl",
+    "metadata": {
+      "features": 50,
+      "file": "resume_classifier_v2.pkl"
+    },
+    "total_inferences": 1,
+    "average_latency_ms": 8579.31,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-sentiment-v2",
+    "name": "Sentiment Classifier",
+    "description": "Sentiment Classifier - Machine Learning model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/sentiment_v2.pkl",
+    "metadata": {
+      "features": 100,
+      "file": "sentiment_v2.pkl"
+    },
+    "total_inferences": 0,
+    "average_latency_ms": 0,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-iris-compatible",
+    "name": "Iris Classifier",
+    "description": "Iris Classifier - Machine Learning model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/iris_compatible.pkl",
+    "metadata": {
+      "features": 4,
+      "file": "iris_compatible.pkl"
+    },
+    "total_inferences": 0,
+    "average_latency_ms": 0,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-mnist",
+    "name": "MNIST Digit Classifier",
+    "description": "MNIST Digit Classifier - ONNX model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/mnist.onnx",
+    "metadata": {
+      "features": 784,
+      "file": "mnist.onnx"
+    },
+    "total_inferences": 0,
+    "average_latency_ms": 0,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-simple-zkml",
+    "name": "ZKML Circuit Model",
+    "description": "ZKML Circuit Model - ONNX model",
+    "model_type": "classification",
+    "is_public": true,
+    "owner_id": "demo-user",
+    "file_path": "storage/models/simple_zkml.onnx",
+    "metadata": {
+      "features": 4,
+      "file": "simple_zkml.onnx"
+    },
+    "total_inferences": 0,
+    "average_latency_ms": 0,
+    "created_at": "2026-01-08T00:00:00Z"
+  },
+  {
+    "id": "model-sentiment-001",
+    "name": "SentimentBERT Pro",
+    "description": "Advanced sentiment analysis model using BERT architecture. Detects positive, negative, and neutral sentiments with high accuracy.",
+    "model_type": "nlp",
+    "owner_id": "demo-user",
+    "is_public": true,
+    "file_path": "/models/sentiment_bert.onnx",
+    "metadata": {
+      "version": "2.1",
+      "accuracy": 0.94,
+      "parameters": "110M"
+    },
+    "total_inferences": 1247,
+    "average_latency_ms": 45,
+    "created_at": "2025-12-14T05:16:05.207416Z"
+  },
+  {
+    "id": "model-image-002",
+    "name": "ImageNet Classifier",
+    "description": "ResNet-50 based image classification model trained on ImageNet. Classifies 1000+ categories.",
+    "model_type": "classification",
+    "owner_id": "demo-user",
+    "is_public": true,
+    "file_path": "/models/resnet50_imagenet.onnx",
+    "metadata": {
+      "version": "1.0",
+      "accuracy": 0.76,
+      "parameters": "25M"
+    },
+    "total_inferences": 856,
+    "average_latency_ms": 120,
+    "created_at": "2025-12-19T05:16:05.207416Z"
+  },
+  {
+    "id": "model-fraud-003",
+    "name": "FraudDetect AI",
+    "description": "Machine learning model for detecting fraudulent transactions. Real-time risk scoring.",
+    "model_type": "classification",
+    "owner_id": "demo-user",
+    "is_public": false,
+    "file_path": "/models/fraud_detector.onnx",
+    "metadata": {
+      "version": "3.2",
+      "precision": 0.98,
+      "recall": 0.95
+    },
+    "total_inferences": 5420,
+    "average_latency_ms": 18,
+    "created_at": "2025-11-14T05:16:05.207416Z"
+  },
+  {
+    "id": "model-embed-004",
+    "name": "Text Embedder v2",
+    "description": "Generate 384-dimensional embeddings for text. Perfect for semantic search and similarity.",
+    "model_type": "embedding",
+    "owner_id": "demo-user",
+    "is_public": true,
+    "file_path": "/models/embedder_v2.onnx",
+    "metadata": {
+      "dimensions": 384,
+      "vocabulary": "50K"
+    },
+    "total_inferences": 3200,
+    "average_latency_ms": 25,
+    "created_at": "2025-12-29T05:16:05.207416Z"
+  },
+  {
+    "id": "model-price-005",
+    "name": "Price Predictor",
+    "description": "Regression model for predicting asset prices based on historical data and market indicators.",
+    "model_type": "regression",
+    "owner_id": "demo-user",
+    "is_public": false,
+    "file_path": "/models/price_predictor.pt",
+    "metadata": {
+      "r_squared": 0.89,
+      "features": 42
+    },
+    "total_inferences": 890,
+    "average_latency_ms": 35,
+    "created_at": "2026-01-03T05:16:05.207416Z"
+  },
+  {
+    "id": "model-credit-006",
+    "name": "CreditScore ML",
+    "description": "Fair lending credit scoring model with bias detection and explainability features.",
+    "model_type": "classification",
+    "owner_id": "demo-user",
+    "is_public": true,
+    "file_path": "/models/credit_score.onnx",
+    "metadata": {
+      "auc": 0.91,
+      "features": 28,
+      "bias_checked": true
+    },
+    "total_inferences": 2100,
+    "average_latency_ms": 22,
+    "created_at": "2026-01-08T05:16:05.207416Z"
+  }
+]

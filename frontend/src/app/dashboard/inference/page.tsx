@@ -614,8 +614,8 @@ function InferenceContent() {
                                             className="border-b border-[var(--glass-border)]/50 cursor-pointer hover:bg-[var(--glass-bg)] transition-colors"
                                             onClick={() => setSelectedJob(job)}
                                         >
-                                            <td className="py-3 font-mono">{job.id.slice(0, 12)}...</td>
-                                            <td className="py-3">{model?.name || job.model_id.slice(0, 8)}</td>
+                                            <td className="py-3 font-mono">{job.id?.slice(0, 12)}...</td>
+                                            <td className="py-3">{model?.name || job.model_id?.slice(0, 8) || "Unknown"}</td>
                                             <td className="py-3">
                                                 <span
                                                     className={`badge ${job.status === "verified" || job.status === "completed"

@@ -1,1 +1,83 @@
-[]
+[
+  {
+    "id": "listing-001",
+    "model_id": "model-sentiment-001",
+    "model_name": "SentimentBERT Pro",
+    "description": "Production-ready sentiment analysis. Verified on-chain for guaranteed accuracy.",
+    "price_per_inference": 0.05,
+    "category": "nlp",
+    "tags": [
+      "sentiment",
+      "bert",
+      "verified"
+    ],
+    "rating": 4.8,
+    "total_inferences": 1247,
+    "total_revenue": 62.35,
+    "owner_id": "demo-user",
+    "is_active": true,
+    "model_type": "nlp",
+    "created_at": "2025-12-16T05:10:51.014939Z"
+  },
+  {
+    "id": "listing-002",
+    "model_id": "model-image-002",
+    "model_name": "ImageNet Classifier",
+    "description": "Classify images into 1000+ categories with ResNet-50 backbone.",
+    "price_per_inference": 0.08,
+    "category": "classification",
+    "tags": [
+      "image",
+      "resnet",
+      "imagenet"
+    ],
+    "rating": 4.5,
+    "total_inferences": 856,
+    "total_revenue": 68.48,
+    "owner_id": "demo-user",
+    "is_active": true,
+    "model_type": "classification",
+    "created_at": "2025-12-24T05:10:51.014939Z"
+  },
+  {
+    "id": "listing-003",
+    "model_id": "model-embed-004",
+    "model_name": "Text Embedder v2",
+    "description": "Generate semantic embeddings for search, similarity, and clustering.",
+    "price_per_inference": 0.02,
+    "category": "embedding",
+    "tags": [
+      "embedding",
+      "semantic",
+      "search"
+    ],
+    "rating": 4.9,
+    "total_inferences": 3200,
+    "total_revenue": 64.0,
+    "owner_id": "demo-user",
+    "is_active": true,
+    "model_type": "embedding",
+    "created_at": "2026-01-01T05:10:51.014939Z"
+  },
+  {
+    "id": "listing-004",
+    "model_id": "model-credit-006",
+    "model_name": "CreditScore ML",
+    "description": "Fair, explainable credit decisions with bias detection. ZKML verified.",
+    "price_per_inference": 0.15,
+    "category": "classification",
+    "tags": [
+      "credit",
+      "lending",
+      "verified",
+      "fair-ai"
+    ],
+    "rating": 4.7,
+    "total_inferences": 2100,
+    "total_revenue": 315.0,
+    "owner_id": "demo-user",
+    "is_active": true,
+    "model_type": "classification",
+    "created_at": "2026-01-10T05:10:51.014939Z"
+  }
+]

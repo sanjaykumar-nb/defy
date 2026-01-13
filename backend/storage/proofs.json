@@ -1,1 +1,588 @@
-[]
+[
+  {
+    "job_id": "bb4e7c4d-2ce8-44d8-a4a6-8d7275e3ceea",
+    "proof_hash": "0x94faee2bc20d0b56cbacf03825eba294ed6ffbeddabaca343960c51cf6a9f7cd",
+    "proof_bytes32": "0x94faee2bc20d0b56cbacf03825eba294ed6ffbeddabaca343960c51cf6a9f7cd",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-churn-model-xgb",
+    "timestamp": "2026-01-13T05:08:36.595810Z",
+    "components": {
+      "input_hash": "0xaefd2468fc62c404317413fe7fca7492f3b93ae661d045a6707a646f497866d6",
+      "computation_hash": "0x378f79cd084ca85052e1b3ec30dae4d255bf9fad8f370463cbfe53eb091d8f96",
+      "model_hash": "0xa5fe301af8cbd92dbf78da5a2adc4828e967afe5251c0831749e8531840731c0"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17514,
+      "proving_time_ms": 0.58
+    },
+    "generated_at": "2026-01-13T05:08:53.666592",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x05f34867fdb1517efd435bea90a5ad2f5f56dd3636b16b9a7e1a0cfff5b919e9",
+      "block_number": 3658617,
+      "gas_used": 283301,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://explorer-mezame.shardeum.org/tx/0x05f34867fdb1517efd435bea90a5ad2f5f56dd3636b16b9a7e1a0cfff5b919e9",
+      "contract_address": "0xb3BD0a70eB7eAe91E6F23564d897C8098574e892",
+      "chain": "Shardeum",
+      "chain_id": 11155111
+    },
+    "id": "78c4db3f-719a-480b-8a92-e6fe6edc38a0"
+  },
+  {
+    "job_id": "2ba975ff-b8b4-4a4e-b024-c00d68f020d2",
+    "proof_hash": "0xf8d4ad9654c7db4b2114eb22d6d8069b7c4c17076a4d59e515a3c8f78aa156b5",
+    "proof_bytes32": "0xf8d4ad9654c7db4b2114eb22d6d8069b7c4c17076a4d59e515a3c8f78aa156b5",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-model",
+    "timestamp": "2026-01-13T05:09:02.582412Z",
+    "components": {
+      "input_hash": "0x7bb17dd4e19faf2229250801da32e559ae5c7eec0160aa83e6180146c1fd067c",
+      "computation_hash": "0x133196eb164851576e97ceaa2c48c0a115cd2bfb52f8e88502a769791afc4ea5",
+      "model_hash": "0x2f9dadd7969260fa70bb15ec0540c47a0d16fef0e7ffdc7f361282210a7430cd"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16913,
+      "proving_time_ms": 1.02
+    },
+    "generated_at": "2026-01-13T05:09:12.960993",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x13263fb2cb554140d126d71a662ea2bc68b280617b9739b0ff637ab21363aa87",
+      "block_number": 3658621,
+      "gas_used": 283301,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://explorer-mezame.shardeum.org/tx/0x13263fb2cb554140d126d71a662ea2bc68b280617b9739b0ff637ab21363aa87",
+      "contract_address": "0xb3BD0a70eB7eAe91E6F23564d897C8098574e892",
+      "chain": "Shardeum",
+      "chain_id": 11155111
+    },
+    "id": "672ba80a-0c7a-489f-b94e-87e96cf35d46"
+  },
+  {
+    "job_id": "e2d496e8-c0f4-4b47-b6e7-4f45c51b3dcc",
+    "proof_hash": "0x51ba1a934d9a55b48d7591122fe7deb18289ba496e3ddd42d5d683f04d0a8aaa",
+    "proof_bytes32": "0x51ba1a934d9a55b48d7591122fe7deb18289ba496e3ddd42d5d683f04d0a8aaa",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-Fraud-detect",
+    "timestamp": "2026-01-13T05:09:31.869132Z",
+    "components": {
+      "input_hash": "0xbf3a0ef7850ff9411536b6bd9e791c5a5f9e3c696ae1a4f5daefc5f3591e6731",
+      "computation_hash": "0x08667c398bbdd13165d01f82fa1ba7f460b164ee0d66bedd77c51f76abd766e0",
+      "model_hash": "0x33ba990bbc2a0ebe09a121b8f73985bc9a0a028a8d06e7605fddd84583e6c2b7"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17429,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:09:38.945920",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0xe73cee5d333de93712f9169dcdf29a1e72b1b4186431e8481c9f394635441391",
+      "block_number": 3658626,
+      "gas_used": 283301,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://explorer-mezame.shardeum.org/tx/0xe73cee5d333de93712f9169dcdf29a1e72b1b4186431e8481c9f394635441391",
+      "contract_address": "0xb3BD0a70eB7eAe91E6F23564d897C8098574e892",
+      "chain": "Shardeum",
+      "chain_id": 11155111
+    },
+    "id": "e672aa90-76a7-41c0-b1db-7f9a8cb4232a"
+  },
+  {
+    "job_id": "6cc71eb3-803e-4af0-b22b-bbe75ab2a5ee",
+    "proof_hash": "0x8f0a32e464b14e6bb0a4ca8aed3dcae89b291ca6ec50be61fc22aebfe53478fa",
+    "proof_bytes32": "0x8f0a32e464b14e6bb0a4ca8aed3dcae89b291ca6ec50be61fc22aebfe53478fa",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-13T05:12:09.035818Z",
+    "components": {
+      "input_hash": "0x5c9c42d66aeafc6bf6135145dedd0983afbf6d6f68233b78992a319ad81db879",
+      "computation_hash": "0x9205dbb69c9324fce511b274cc3cdd9047847e7fd576593245badeae327099af",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15583,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:12:20.938759",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x5f7264fd388ae4de2ab75cdcd9e85fbc852ee1fc0bbd82db596b8893b2da676d",
+      "block_number": 3658656,
+      "gas_used": 283301,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://explorer-mezame.shardeum.org/tx/0x5f7264fd388ae4de2ab75cdcd9e85fbc852ee1fc0bbd82db596b8893b2da676d",
+      "contract_address": "0xb3BD0a70eB7eAe91E6F23564d897C8098574e892",
+      "chain": "Shardeum",
+      "chain_id": 11155111
+    },
+    "id": "02423789-2295-401d-8501-92856077b778"
+  },
+  {
+    "job_id": "e398b80c-f963-4557-96f5-549517e700e6",
+    "proof_hash": "0xa3027ffe46626b0f3276dcfaafd66191899003a35dfa0a5e9752cbd989d647dc",
+    "proof_bytes32": "0xa3027ffe46626b0f3276dcfaafd66191899003a35dfa0a5e9752cbd989d647dc",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-creditcard-v2",
+    "timestamp": "2026-01-13T05:16:21.792875Z",
+    "components": {
+      "input_hash": "0x5c9c42d66aeafc6bf6135145dedd0983afbf6d6f68233b78992a319ad81db879",
+      "computation_hash": "0x9205dbb69c9324fce511b274cc3cdd9047847e7fd576593245badeae327099af",
+      "model_hash": "0x861e2f54b5cd509d3e5633f6046b3a9a80cdc1eea9ffa507d515be96fb51c2af"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15807,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:16:28.584099",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "d7fa1b5e-072e-46f2-baba-5f9d2d375f5a"
+  },
+  {
+    "job_id": "c88eab2f-d27b-4286-94ea-faad10cdd029",
+    "proof_hash": "0x2009d87570d9f887d8e78213ca69c2680fc5862fca960c5d9a95776a6c37520c",
+    "proof_bytes32": "0x2009d87570d9f887d8e78213ca69c2680fc5862fca960c5d9a95776a6c37520c",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-home-price-v2",
+    "timestamp": "2026-01-13T05:16:48.455790Z",
+    "components": {
+      "input_hash": "0x432a799f79d84af1449b0ac9330fe190201b810528f804944148789d34d7536e",
+      "computation_hash": "0x2af6d27a7681ef633c3cf9807aea8618ed4e79f3ef45708f8134f1214b2f1cbc",
+      "model_hash": "0xe2a7490c58db5d4acde335e4b90f9f4a73ab59688472472abcb2e06cad499c5f"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17809,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:16:52.970154",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "eaef35c9-f569-4086-b126-dde607674f8f"
+  },
+  {
+    "job_id": "2dc63484-b80e-421c-8bdb-7603e31c21e7",
+    "proof_hash": "0xcb44c2cf511549ed76860147d8fba169e16034236f4009803f901871ed4080e4",
+    "proof_bytes32": "0xcb44c2cf511549ed76860147d8fba169e16034236f4009803f901871ed4080e4",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:17:43.969668Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17166,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:17:46.894019",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "3a4e59bf-12db-44ac-9a0e-ef5f8420bd35"
+  },
+  {
+    "job_id": "d8f78d42-d6e8-4a7b-b0d9-dcc5f1597c96",
+    "proof_hash": "0x4221181b2ca0fffaf03559bb836c1e59819b250e6c0a95682b6d880ea347d997",
+    "proof_bytes32": "0x4221181b2ca0fffaf03559bb836c1e59819b250e6c0a95682b6d880ea347d997",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:18:57.214131Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15702,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:19:06.647110",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "660698fd-66c1-456f-8429-55dd118eeb1f"
+  },
+  {
+    "job_id": "dcfa98e7-fed6-4ca1-bf1c-6c4a3a6b064e",
+    "proof_hash": "0x8cdc78c69ba94f529cd6bbc38e611d8335a6fd83c74ef034c23b14e3be07b646",
+    "proof_bytes32": "0x8cdc78c69ba94f529cd6bbc38e611d8335a6fd83c74ef034c23b14e3be07b646",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:20:07.161252Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19857,
+      "proving_time_ms": 0.99
+    },
+    "generated_at": "2026-01-13T05:20:11.219491",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "34334123-cfda-4e55-959e-7b8741cca90d"
+  },
+  {
+    "job_id": "3dee06c0-6c8e-401d-b648-11fca3ccd90d",
+    "proof_hash": "0x9efe2c5c0e5e0040a8d9867cab028a6819d9980d83aa70ec4095c3d3620b059f",
+    "proof_bytes32": "0x9efe2c5c0e5e0040a8d9867cab028a6819d9980d83aa70ec4095c3d3620b059f",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:21:12.169283Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 17031,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:21:14.521300",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "b17bc276-c490-4e16-a3e6-10746dbd997e"
+  },
+  {
+    "job_id": "bc901de1-fc74-4e48-8497-6f9a77269009",
+    "proof_hash": "0xc53e37a6a5cec93f6536ab2140e7be83560f2e3c1ec08b8c85dfdf19495da8c9",
+    "proof_bytes32": "0xc53e37a6a5cec93f6536ab2140e7be83560f2e3c1ec08b8c85dfdf19495da8c9",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:21:52.951252Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19718,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:21:55.825582",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "9a5ada73-f93b-4ec5-9542-c93d30030a78"
+  },
+  {
+    "job_id": "bfc7767b-34c7-49c9-b1de-d54e24483120",
+    "proof_hash": "0x942623d404fd6fa9da3d8bfcb469520cb712d38e8c7ebf7fd5e49551bfe4ff37",
+    "proof_bytes32": "0x942623d404fd6fa9da3d8bfcb469520cb712d38e8c7ebf7fd5e49551bfe4ff37",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:22:56.360999Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 15065,
+      "proving_time_ms": 0.88
+    },
+    "generated_at": "2026-01-13T05:22:59.144087",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "bb693a16-224e-4edd-8ea6-8be2852555ea"
+  },
+  {
+    "job_id": "d009c966-99b1-46c7-baf8-d346d51c481b",
+    "proof_hash": "0xdc0e39d5982ea76f8bb1d314a368d7f8c3474cfa1251a60e14a51af43b57efa6",
+    "proof_bytes32": "0xdc0e39d5982ea76f8bb1d314a368d7f8c3474cfa1251a60e14a51af43b57efa6",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:23:17.187219Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 18605,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:23:19.582961",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "d9779139-866d-4709-a453-7ed2a4e8048b"
+  },
+  {
+    "job_id": "2df842c7-2ecc-4949-b323-720e3c6c27fb",
+    "proof_hash": "0x817fd505b76ad27e5319c55adf470ed7d7975f6e3dad114ba4e5d43d2a776aab",
+    "proof_bytes32": "0x817fd505b76ad27e5319c55adf470ed7d7975f6e3dad114ba4e5d43d2a776aab",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-resume-classifier-v2",
+    "timestamp": "2026-01-13T05:24:25.747480Z",
+    "components": {
+      "input_hash": "0xaefd2468fc62c404317413fe7fca7492f3b93ae661d045a6707a646f497866d6",
+      "computation_hash": "0x28b8e23e7c6ec308c34c3cb0f18608f43582364149a106fe34a73eb61a3b7345",
+      "model_hash": "0xecb729b23099bf158e4ad6885e3f98682745f37c1ded4885678828edec468464"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16134,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:24:34.255915",
+    "on_chain": {
+      "anchored": false,
+      "error": "{'code': -32000, 'message': 'failed to broadcast transaction: failed to check sender balance: sender balance < tx cost (992884654663378235134 < 1152073282718835500000): insufficient funds: insufficient funds [cosmossdk.io/errors@v1.0.2/errors.go:77]'}",
+      "chain": "Shardeum"
+    },
+    "id": "da0630c4-3d31-474f-8105-1e7f179f3d9c"
+  },
+  {
+    "job_id": "69fe9cfb-8fae-47c8-b2ee-6bf143932e35",
+    "proof_hash": "0xf782e73e16229f853fa4da88bf7b45f06964250622dfa096b9fee84e1ae0fb7e",
+    "proof_bytes32": "0xf782e73e16229f853fa4da88bf7b45f06964250622dfa096b9fee84e1ae0fb7e",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:25:34.550311Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 16031,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:25:46.968282",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x2349a4e7ceee23903e556fb5322a470a53aeced3645123a645ad45a5fe8af84c",
+      "block_number": 3658805,
+      "gas_used": 283301,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://explorer-mezame.shardeum.org/tx/0x2349a4e7ceee23903e556fb5322a470a53aeced3645123a645ad45a5fe8af84c",
+      "contract_address": "0xb3BD0a70eB7eAe91E6F23564d897C8098574e892",
+      "chain": "Shardeum",
+      "chain_id": 11155111
+    },
+    "id": "ebbf9029-d334-4bee-910f-26a13f06f728"
+  },
+  {
+    "job_id": "7cc7fc4d-3b65-4b05-9e96-c5097c03ae12",
+    "proof_hash": "0xb6eb0b15838cfae15d135a5358600b9d7941485fe90a90554ecf5b4a92c887fe",
+    "proof_bytes32": "0xb6eb0b15838cfae15d135a5358600b9d7941485fe90a90554ecf5b4a92c887fe",
+    "proof_version": "zkml-v1.0",
+    "model_version": "v-inference-v1.0.0",
+    "model_id": "model-fraud-detection-v2",
+    "timestamp": "2026-01-13T05:36:46.014625Z",
+    "components": {
+      "input_hash": "0x9b5247d6bbeb781fc38de7bf359964829110e00a33e4e014c033fdc8f8df2eb1",
+      "computation_hash": "0xbd23f8c935aa4e7dd9b21c166bafadc2cb64e3b5e8602e58f4da20028b1d17f5",
+      "model_hash": "0xc343dc4be045f4b640868a3a519dc55d0c3bce313d7f48aa3ce94bc0d3f96077"
+    },
+    "attestations": {
+      "computation_valid": true,
+      "model_version_verified": true,
+      "input_integrity_verified": true,
+      "output_deterministic": true
+    },
+    "circuit_info": {
+      "name": "v-inference-zkml-circuit",
+      "type": "groth16",
+      "curve": "bn254",
+      "constraints": 19883,
+      "proving_time_ms": 0.0
+    },
+    "generated_at": "2026-01-13T05:37:13.221723",
+    "on_chain": {
+      "anchored": true,
+      "transaction_hash": "0x655dfc867cf4552c4bb09d6674b1fb4a2d7fd81a0da19904fd9cd1cc4fd7672c",
+      "block_number": 3658933,
+      "gas_used": 283301,
+      "gas_cost_eth": null,
+      "gas_cost_usd": null,
+      "explorer_url": "https://explorer-mezame.shardeum.org/tx/0x655dfc867cf4552c4bb09d6674b1fb4a2d7fd81a0da19904fd9cd1cc4fd7672c",
+      "contract_address": "0xb3BD0a70eB7eAe91E6F23564d897C8098574e892",
+      "chain": "Shardeum",
+      "chain_id": 11155111
+    },
+    "id": "3df69d21-e528-4350-95fd-0dc82759d576"
+  }
+]

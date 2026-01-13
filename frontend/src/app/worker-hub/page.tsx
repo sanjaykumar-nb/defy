@@ -36,6 +36,7 @@ const CopyIcon = () => (
 
 export default function WorkerHub() {
     const [status, setStatus] = useState<"idle" | "connecting" | "active" | "offline">("offline");
+    const [publicUrl, setPublicUrl] = useState("");
     const [earnings, setEarnings] = useState(0.0);
     const [nodeId, setNodeId] = useState("");
     const [activeJob, setActiveJob] = useState<any>(null);
@@ -63,6 +64,7 @@ export default function WorkerHub() {
                     setEarnings(stats.total_earnings_eth || 0);
                     setStatus(stats.status === "active" ? "active" : "idle");
                     setActiveJob(stats.current_shard);
+                    setPublicUrl(stats.public_url || "");
                 }
 
                 // 2. Worker Capabilities
@@ -235,7 +237,7 @@ export default function WorkerHub() {
                     ) : (
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                             {(shards.length > 0 ? shards : [...Array(10)]).map((shard, i) => {
-                                const isMyShard = shard?.worker_id === nodeId;
+                                const isMyShard = shard && nodeId && shard.worker_id === nodeId;
                                 const isCompleted = shard?.status === 'completed';
                                 const isProcessing = shard?.status === 'processing';
 
@@ -311,15 +313,36 @@ export default function WorkerHub() {
                         <div className="space-y-2">
                             <h2 className="text-3xl font-black">EXPAND THE MESH</h2>
                             <p className="text-[var(--foreground-muted)]">
-                                Share this portal with others to multiply the collective compute of V-OBLIVION.
+                                Share your node's external link so others can assist in verification & monitoring.
                             </p>
+                            {publicUrl && (
+                                <div className="text-xs font-mono text-[var(--primary-400)] truncate max-w-md">
+                                    Live Link: {publicUrl}
+                                </div>
+                            )}
                         </div>
-                        <button
-                            onClick={() => setShowGuide(true)}
-                            className="px-8 py-4 bg-white text-black font-black rounded-2xl hover:scale-105 transition-transform flex items-center gap-3"
-                        >
-                            <GlobalIcon /> GET SHAREABLE LINK
-                        </button>
+                        <div className="flex gap-4">
+                            <button
+                                onClick={() => {
+                                    if (publicUrl) {
+                                        navigator.clipboard.writeText(publicUrl);
+                                        setCopied(true);
+                                        setTimeout(() => setCopied(false), 2000);
+                                    } else {
+                                        setShowGuide(true);
+                                    }
+                                }}
+                                className="px-8 py-4 bg-white text-black font-black rounded-2xl hover:scale-105 transition-transform flex items-center gap-3"
+                            >
+                                <GlobalIcon /> {copied ? 'COPIED LINK!' : 'COPY HUB LINK'}
+                            </button>
+                            <button
+                                onClick={() => setShowGuide(true)}
+                                className="px-8 py-4 bg-[var(--dark-800)] border border-[var(--glass-border)] text-white font-black rounded-2xl hover:scale-105 transition-transform"
+                            >
+                                HOW TO START
+                            </button>
+                        </div>
                     </div>
                 </div>
 

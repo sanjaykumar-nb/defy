@@ -105,23 +105,21 @@ async def verify_worker_liveness(node_id: str) -> bool:
         if response.status_code == 200:
             data = response.json()
             if data.get("node_id") == node_id:
+                # Fetch capabilities too
+                cap_res = requests.get(f"{public_url}/capabilities", timeout=5)
+                capabilities = cap_res.json() if cap_res.status_code == 200 else {}
+                
                 # Update status in DB
                 for w in workers:
                     if w["node_id"] == node_id:
                         w["is_live"] = True
                         w["last_seen"] = datetime.now().isoformat()
+                        if capabilities:
+                            w["hardware_info"] = capabilities
                         break
                 db._write_file(db.workers_file, workers)
                 return True
     except Exception as e:
         print(f"WARN [BACKEND] Verification failed for worker {node_id} at {public_url}: {e}")
         
-    # [DEV MODE] If network is restricted but worker registered, mark as live for demo
-    print(f"INFO [BACKEND] Using DEMO MODE: Marking worker {node_id} as live despite connection error")
-    for w in workers:
-        if w["node_id"] == node_id:
-            w["is_live"] = True
-            w["last_seen"] = datetime.now().isoformat()
-            break
-    db._write_file(db.workers_file, workers)
-    return True
+    return False
